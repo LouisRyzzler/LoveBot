@@ -4,7 +4,7 @@ const zeroImg = new MessageAttachment('./assets/img/0.png')
 const unImg = new MessageAttachment('./assets/img/1.png')
 const deuxImg = new MessageAttachment('./assets/img/2.png')
 const troisImg = new MessageAttachment('./assets/img/3.png')
-const quatreImg = new MessageAttachment('./assets/img/4.png')
+const quatreImg = new MessageAttachment('/home/container/assets/img/4.png')
 const cinqImg = new MessageAttachment('./assets/img/5.png')
 
 class Avis {
