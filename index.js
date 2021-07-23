@@ -27,4 +27,4 @@ client.on('message', message => {
     new Informations( message, client).selector()
 })
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
