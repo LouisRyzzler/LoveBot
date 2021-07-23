@@ -11,10 +11,6 @@ const { Color1 } = require('./commands/color1.js');
 const { Color2 } = require('./commands/color2.js');
 const { Informations } = require('./commands/informations.js');
 
-
-
-
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -29,11 +25,6 @@ client.on('message', message => {
     new Color1( message, client).selector()
     new Color2( message, client).selector()
     new Informations( message, client).selector()
-
-
-
-
-    
 })
 
-client.login("ODYxNTQ5NTY5Mjk2MDM5OTM3.YOLakA.ClAUk0aMikKGKBbSM_aV-Xp_vw0");
+client.login(TOKEN);

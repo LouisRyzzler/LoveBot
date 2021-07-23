@@ -1,8 +1,8 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const pecheImg = new MessageAttachment('./home/container/assets/img/84451.png');
-const ceriseImg = new MessageAttachment('./home/container/assets/img/7889.png');
-const melonImg = new MessageAttachment('./home/container/assets/img/5556.png');
-const raisinImg = new MessageAttachment('./home/container/assets/img/765560.png');
+const pecheImg = new MessageAttachment('./assets/img/84451.png');
+const ceriseImg = new MessageAttachment('./assets/img/7889.png');
+const melonImg = new MessageAttachment('./assets/img/5556.png');
+const raisinImg = new MessageAttachment('./assets/img/765560.png');
 const { PREFIX } = require("../config");
 
 class Rencontre {
