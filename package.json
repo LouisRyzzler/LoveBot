@@ -1,0 +1,14 @@
+{
+    "name": "lovebot",
+    "version": "1.0.0",
+    "description": "pour Passion",
+    "main": "index,js",
+    "author": "Louis",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^12.5.3"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}
