@@ -4,7 +4,7 @@ const zeroImg = new MessageAttachment('./assets/img/0.png')
 const unImg = new MessageAttachment('./assets/img/1.png')
 const deuxImg = new MessageAttachment('./assets/img/2.png')
 const troisImg = new MessageAttachment('./assets/img/3.png')
-const quatreImg = new MessageAttachment('/assets/img/4.png')
+const quatreImg = new MessageAttachment('./assets/img/4.png')
 const cinqImg = new MessageAttachment('./assets/img/5.png')
 
 class Avis {
@@ -35,7 +35,7 @@ class Avis {
                         new MessageEmbed()
                             .setColor("#2f3136")
                             .setTitle("Laisse un avis sur Sweety !")
-                            .setDescription("Pour laisser un avis il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.")
+                            .setDescription("Pour laisser un avis sur Sweety il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
