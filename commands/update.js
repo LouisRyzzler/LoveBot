@@ -29,9 +29,9 @@ class Update {
                 if(this.args[0] === PREFIX + "update") {
                     this.message.channel.send(
                         new MessageEmbed()
-                            .setTitle("1.0.2")
+                            .setTitle("1.0.3")
                             .setColor("#f16179")
-                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\nLa commande ``!rencontre`` a été allégé. Désormais seule une courte description et une photo seront demandés pour poster votre annonce. De plus l'accès entier au serveur est disponible dès le départ, plus besoin d'executer la commande en question. \n\n Le préfix du bot a changé en ``!``")
+                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\nSorti de la commande ``help`. Exécutable n'importe où sur le serveur de préférence dans le salon <#862785192628060171> et tapez ``!help``.")
                     )
                 }
             }    
