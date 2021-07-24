@@ -1,4 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
+const exclamation = new MessageAttachment('./assets/img/exclamation.png');
 const { PREFIX } = require("../config");
 
 class Help {
@@ -30,7 +31,9 @@ class Help {
                     new MessageEmbed()
                         .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
-                        .setDescription("**Prefix**\n Mon prefix sur Sweety est: ``!``\n\n Pour entrer un commande sur le serveur il vous suffit d'écrire le prefix puis le nom de la commande, *suivre le model ci-contre :* ``!help``\n\n **Commandes**\n ``!rencontre`` si tapé dans le salon <#862784305439834142> cela vous permettra de poster votre profil.\n ``!avis`` si tapé dans le salon <#862784628980187157> cela vous permettra de poster votre avis.\n\n **Liens utiles**\n Invitation du serveur: https://discord.gg/c56RxVhfra")
+                        .attachFiles(exclamation)
+                        .setThumbnail('attachment://exclamation.png')
+                        .setDescription("**Prefix**\n Mon prefix sur Sweety est: ``!``\n\n Pour entrer une commande sur le serveur il vous suffit d'écrire le prefix puis le nom de la commande, *suivre le model ci-contre :* ``!help``\n\n **Commandes**\n ``!rencontre`` si tapé dans le salon <#862784305439834142> cela vous permettra de poster votre profil.\n ``!avis`` si tapé dans le salon <#862784628980187157> cela vous permettra de poster votre avis.\n\n **Liens utiles**\n Invitation du serveur: https://discord.gg/c56RxVhfra")
                 )
             }
     }
