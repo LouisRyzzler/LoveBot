@@ -31,7 +31,7 @@ class Update {
                         new MessageEmbed()
                             .setTitle("1.0.3")
                             .setColor("#f16179")
-                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\nSorti de la commande ``help``. Exécutable n'importe où sur le serveur mais de préférence dans le salon <#862785192628060171> et tapez ``!help``.\n\n Redisign de la commande ``!rencontre``. De plus une fois votre profil posté, trois réations sont automatiquement: ``❌`` pour dislike / ``❤️`` pour liker / ``💛`` pour donner un super like.")
+                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\nSorti de la commande ``help``. Exécutable n'importe où sur le serveur mais de préférence dans le salon <#862785192628060171> et tapez ``!help``.\n\n Redisign de la commande ``!rencontre``. De plus une fois votre profil posté, trois réations sont automatiquement ajoutés: ``❌`` pour dislike / ``❤️`` pour liker / ``💛`` pour donner un super like.")
                     )
                 }
             }    
