@@ -33,7 +33,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#2f3136")
-                            .setDescription("Bonjour ! que dirais-tu de poster ton profil afin de rencontrer le type de personne que tu cherches ?\n ```Pour commencer décris toi brièvement ici.```")
+                            .setDescription("**Bonjour ! que dirais-tu de poster ton profil afin de rencontrer le type de personne que tu cherches ?**\n ```Pour commencer décris toi brièvement ici.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
@@ -46,7 +46,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#2f3136")
-                            .setDescription("Après t'être décris envoie une photo de ton choix.\n ```Il te suffit de joindre une image par discord pour finaliser ton profil.```")
+                            .setDescription("**Après t'être décris envoie une photo de ton choix.**\n ```Il te suffit de joindre une image par discord pour finaliser ton profil.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
