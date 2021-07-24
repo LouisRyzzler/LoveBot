@@ -33,7 +33,7 @@ class Help {
                         .setColor("#f16179")
                         .attachFiles(exclamation)
                         .setThumbnail('attachment://exclamation.png')
-                        .setDescription("**Prefix**\n Mon prefix sur Sweety est: ``!``\n\n Pour entrer une commande sur le serveur il vous suffit d'écrire le prefix puis le nom de la commande, *suivre le model ci-contre :* ``!help``\n\n **Commandes**\n ``!rencontre`` si tapé dans le salon <#862784305439834142> cela vous permettra de poster votre profil.\n ``!avis`` si tapé dans le salon <#862784628980187157> cela vous permettra de poster votre avis.\n\n **Liens utiles**\n Invitation du serveur: https://discord.gg/c56RxVhfra")
+                        .setDescription("**Prefix**\n Mon prefix sur Sweety est: ``!``\n\n Pour entrer une commande sur le serveur il vous suffit d'écrire le prefix puis le nom de la commande, *suivre le model ci-contre :* ``!help``\n\n **Commandes**\n <:pointer:863335546751287306> ``!rencontre`` si tapé dans le salon <#862784305439834142> cela vous permettra de poster votre profil.\n <:pointer:863335546751287306> ``!avis`` si tapé dans le salon <#862784628980187157> cela vous permettra de poster votre avis.\n\n **Liens utiles**\n Invitation du serveur: https://discord.gg/c56RxVhfra")
                 )
             }
     }
