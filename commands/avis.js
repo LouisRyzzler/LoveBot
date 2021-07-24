@@ -50,7 +50,7 @@ class Avis {
                             .addFields(
                                 {
                                     name: "N'oublie pas de laisser une note !",
-                                    value: "```Coche la réacton correspondant au nombre d'étoile\n *Attendez que toutes les réactions soient ajoutés*```",
+                                    value: "```Coche la réacton correspondant au nombre d'étoile.\n Attendez que toutes les réactions soient ajoutés.```",
                                     inline: false 
                                 }
                             )
