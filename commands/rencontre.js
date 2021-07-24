@@ -123,12 +123,10 @@ class Rencontre {
                                                                     .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                     .setFooter(this.message.guild.name, this.message.guild.iconURL()) 
                                                                 ).then(async (message) => {
-                                                                    await message.react('❌').then().catch(console.error);
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
 
-                                                                    const filter = (reaction, user) => reaction.emoji.name === "❌" ||
-                                                                        reaction.emoji.name === "❤️" ||
+                                                                    const filter = (reaction, user) => reaction.emoji.name === "❤️" ||
                                                                         reaction.emoji.name === "💛" &&
                                                                         user.id === this.message.author.id;
 
@@ -192,12 +190,10 @@ class Rencontre {
                                                                 .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                 .setFooter(this.message.guild.name, this.message.guild.iconURL())
                                                                 ).then(async (message) => {
-                                                                    await message.react('❌').then().catch(console.error);
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
 
-                                                                    const filter = (reaction, user) => reaction.emoji.name === "❌" ||
-                                                                        reaction.emoji.name === "❤️" ||
+                                                                    const filter = (reaction, user) => reaction.emoji.name === "❤️" ||
                                                                         reaction.emoji.name === "💛" &&
                                                                         user.id === this.message.author.id;
 
@@ -261,12 +257,10 @@ class Rencontre {
                                                                 .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                 .setFooter(this.message.guild.name, this.message.guild.iconURL())
                                                                 ).then(async (message) => {
-                                                                    await message.react('❌').then().catch(console.error);
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
 
-                                                                    const filter = (reaction, user) => reaction.emoji.name === "❌" ||
-                                                                        reaction.emoji.name === "❤️" ||
+                                                                    const filter = (reaction, user) => reaction.emoji.name === "❤️" ||
                                                                         reaction.emoji.name === "💛" &&
                                                                         user.id === this.message.author.id;
 
@@ -330,12 +324,10 @@ class Rencontre {
                                                                     .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                     .setFooter(this.message.guild.name, this.message.guild.iconURL())
                                                                 ).then(async (message) => {
-                                                                    await message.react('❌').then().catch(console.error);
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
 
-                                                                    const filter = (reaction, user) => reaction.emoji.name === "❌" ||
-                                                                        reaction.emoji.name === "❤️" ||
+                                                                    const filter = (reaction, user) => reaction.emoji.name === "❤️" ||
                                                                         reaction.emoji.name === "💛" &&
                                                                         user.id === this.message.author.id;
 
