@@ -33,7 +33,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setDescription("**Bonjour ! que dirais-tu de poster ton profil afin de rencontrer le type de personne que tu cherches ?**\n ```Pour commencer décris toi brièvement ici.```")
+                            .setDescription("**Bonjour ! que dirais-tu de poster ton profil afin de rencontrer le type de personne que tu recherches ?**\n ```Pour commencer décris toi brièvement ici.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 

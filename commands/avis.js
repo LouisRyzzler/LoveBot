@@ -33,9 +33,9 @@ class Avis {
                     
                     this.message.author.send(
                         new MessageEmbed()
-                            .setColor("#2f3136")
+                            .setColor("#f16179")
                             .setTitle("Laisse un avis sur Sweety !")
-                            .setDescription("Pour laisser un avis sur Sweety il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.")
+                            .setDescription("```Pour laisser un avis sur Sweety il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
@@ -46,11 +46,11 @@ class Avis {
                         });
                     this.message.author.send(
                         new MessageEmbed()
-                            .setColor("#2f3136")
+                            .setColor("#f16179")
                             .addFields(
                                 {
                                     name: "N'oublie pas de laisser une note !",
-                                    value: "Coche la réacton correspondant au nombre d'étoile\n *Attendez que toutes les réactions soient ajoutés*",
+                                    value: "```Coche la réacton correspondant au nombre d'étoile\n *Attendez que toutes les réactions soient ajoutés*```",
                                     inline: false 
                                 }
                             )
