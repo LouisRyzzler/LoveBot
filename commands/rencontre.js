@@ -33,7 +33,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#2f3136")
-                            .setDescription("**Décrivez vous brièvement.**")
+                            .setDescription("Bonjour ! que dirais-tu de poster ton profil afin de rencontrer le type de personne que tu cherches ?\n ```Pour commencer décris toi brièvement ici.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
@@ -46,7 +46,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#2f3136")
-                            .setDescription("**Envoyez une photo de vous afin de finaliser la description.**")
+                            .setDescription("Après t'être décris envoie une photo de ton choix.\n ```Il te suffit de joindre une image par discord pour finaliser ton profil.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
@@ -61,8 +61,8 @@ class Rencontre {
                                 .setColor("#2f3136")
                                 .addFields(
                                     {
-                                        name: "Cochez ce que vous recherchez.",
-                                        value: "Réagissez avec 🍑 pour recherchez un coup d'un soir. \nRéagissez avec 🍒 pour rechercher votre moitié. \nRéagissez avec 🍉 pour rechercher un sexfirend. \nRéagissez avec 🍇 pour rechercher des amitiés.",
+                                        name: "Quel type de rencontre recherchez-vous ?.",
+                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis.```",
                                         inline: false
                                     }
                                 )
@@ -90,7 +90,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.",
+                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -159,7 +159,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.",
+                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -228,7 +228,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.",
+                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -297,7 +297,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.",
+                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
