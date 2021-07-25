@@ -42,7 +42,8 @@ client.on('guildMemberAdd', (member) => {
     const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
-        .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`);
+        .setFooter(`Souhaitez la bienvenue à ${member.displayName} !`)
+        .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed)
