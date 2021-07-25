@@ -8,16 +8,6 @@ class guildMemberAdd {
         this.args = message.content.slice().split(/ /).filter(element => element !== '');
     }
 
-
-    selector() {
-        if(this.message.author.id !== this.client.user.id) {
-            switch(this.args[0]) {
-            }
-        }
-    }
-
-
-
     guildMemberAdd() {
         if(this.message.channel.id !== this.client.user.id) {
             if(this.message.channel.id === "862785768870641704") { 
