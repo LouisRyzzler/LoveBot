@@ -13,6 +13,7 @@ const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
+const { AddMember } = require('./commands/guildMemberAadd.js')
 
 
 client.on('ready', () => {
@@ -34,20 +35,9 @@ client.on('message', message => {
     new Dice( message, client).selector()
 })
 
-const InviteId = '868906645277769758'
-const channelId = '862785768870641704'
-
-client.on('guildMemberAdd', (member) => {
-    console.log(member)
+client.on('guildMemberAdd', member => {
+    new AddMember( member, client).selector()
     
-    const embed =  new MessageEmbed()
-        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
-        .setColor("#f16179")
-        .setFooter("Bienvenue sur Sweety !")
-        .setTimestamp();
-
-    const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed)
 })
 
 client.login(process.env.TOKEN);
