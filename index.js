@@ -13,7 +13,7 @@ const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
-const { guildMemberAdd } = require('./commands/guildMemberAdd.js')
+
 
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
@@ -34,8 +34,16 @@ client.on('message', message => {
     new Dice( message, client).selector()
 })
 
-client.on('guildMemberAdd', member => {
-    new guildMemberAdd( member, client).selector()
+const channelId = '862785768870641704'
+
+client.on('guildMemberAdd', (member) => {
+    console.log(member)
+
+    const message = `Souhaitez la bienvenue à <@${member.id}> to the server !`
+
+    const channel = member.guild.channels.cache.get(channelId)
+    channel.send(message)
+    
 })
 
 client.login(process.env.TOKEN);
