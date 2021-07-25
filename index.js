@@ -13,6 +13,8 @@ const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
+const { Join } = require('./commands/join.js')
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -31,6 +33,7 @@ client.on('message', message => {
     new Help( message, client).selector()
     new Casino( message, client).selector()
     new Dice( message, client).selector()
+    new Join( message, client).selector()
 })
 
 client.login(process.env.TOKEN);
