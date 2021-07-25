@@ -2,7 +2,7 @@ const { MessageEmbed, MessageAttachment } = require("discord.js");
 
 module.exports = (client) => {
     const embed = new MessageEmbed()
-        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+        .setAuthor(`${member.displayName} (${member.id})`, member.user.displayName())
         .setColor("#35f92")
         .setFooter("Un utilisateur a rejoins")
         .setTimestamp();
