@@ -11,6 +11,7 @@ const { Color1 } = require('./commands/color1.js');
 const { Color2 } = require('./commands/color2.js');
 const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
+const { Jackpot } = require('./commands/jackpot.js');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -27,6 +28,7 @@ client.on('message', message => {
     new Color2( message, client).selector()
     new Informations( message, client).selector()
     new Help( message, client).selector()
+    new Jackpot( message, client).selector()
 })
 
 client.login(process.env.TOKEN);
