@@ -22,20 +22,13 @@ class Join  {
 
 
     Join() {
-        let guild = this.client.guilds.cache.some(fn => fn.id === "862781120540835901") ? this.client.guilds.cache.get("862781120540835901") : null;
-        if(guild !== null) {
-            let channel = guild.channels.cache.some(fn => fn.id === "862785768870641704") ? guild.channels.cache.get("862785768870641704") : null;
-            if(channel !== null) {
-
-                client.on('guildMemberAdd', (member) => {
-                    channel.send(
-                        new MessageEmbed()
-                        .setColor("#f16179")
-                        .setDescription(`Souhaitez la bienvenue à <@${member.id}> !`)
-                    )
-                })
-            }
-        }
+        this.client.channels.cache.get('862785768870641704').send(
+            new MessageEmbed()
+            .setAuthor(this.message.author.username, this.message.author.avatarURL())
+            .setColor("#35f92")
+            .setFooter("Un utilisateur a rejoins")
+            .setTimestamp()
+        )
     }
 }
 
