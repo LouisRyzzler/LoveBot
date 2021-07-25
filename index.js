@@ -49,4 +49,33 @@ client.on('guildMemberAdd', (member) => {
     channel.send(embed)
 })
 
+const channelId = '868906645277769758'
+
+client.on('guildMemberAdd', (member) => {
+    const { guild } = member
+
+    guild.fetchInvites().then((invites) => {
+        const inviteCounter = {}
+
+        invites.forEach((invite) => {
+            const { uses, inviter } = invite
+            const { username, discriminator } = inviter
+
+            const name = `${username}#${discriminator}`
+
+            inviteCounter[name] = (inviteCounter[name] || 0) + uses
+        })
+
+        let replyText = 'Invites:'
+
+        for (const invite in inviteCounter) {
+            const count = inviteCounter[invite]
+            replyText += `\n${invite} a invité ${count} membre(s) !`
+        }
+
+        message.reply(replyText)
+    })
+})
+
+
 client.login(process.env.TOKEN);
