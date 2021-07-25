@@ -51,4 +51,4 @@ client.on('guildMemberAdd', (member) => {
     }
 })
 
-client.login(Process.env.TOKEN);
+client.login(process.env.TOKEN);
