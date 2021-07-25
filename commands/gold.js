@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const trophé = new MessageAttachment('./assets/img/trophé.png');
+const trophe = new MessageAttachment('./assets/img/trophé.png');
 const { PREFIX } = require("../config");
 
 class Gold {
@@ -31,7 +31,7 @@ class Gold {
                     new MessageEmbed()
                         .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
-                        .attachFiles(trophé)
+                        .attachFiles(trophe)
                         .setThumbnail('attachment://trophé.png')
                         .addFields(
                             { name: "Comment obtenir le rôle Sweety Gold ?", value: "Inviter 3 personnes sur le serveur vous permettra d'obtenir le rôle <@&868813991630237706>", inline: false },
