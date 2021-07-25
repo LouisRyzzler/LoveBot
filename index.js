@@ -16,7 +16,7 @@ const { Dice } = require('./commands/dice.js')
 
 
 client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`${client.user.tag} est connecté !`);
 });
 
 client.on('message', message => {

@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 
-module.exports = (client) => {
+module.exports = (client, member) => {
     const embed = new MessageEmbed()
         .setAuthor(`${member.displayName} (${member.id})`, member.user.displayName())
         .setColor("#35f92")
