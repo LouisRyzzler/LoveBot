@@ -31,15 +31,11 @@ class Casino {
                 if(this.args[0] === PREFIX + "casino") {
                     this.message.channel.send(
                         new MessageEmbed()
+                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
                             .setColor("#f16179")
                             .attachFiles(jackpotImg)
                             .setThumbnail('attachment://jackpot.jpg')
-                            .addFields(
-                                { name: '#', value: randomDice(), inline: true },
-                                { name: '#', value: randomDice(), inline: true },
-                                { name: '#', value: randomDice(), inline: true }
-                            )
-                            .setFooter(this.message.author.username, this.message.author.avatarURL())
+                            .setDescription(randomDice(), randomDice(), randomDice())
                     )
                 }
             }    
