@@ -1,4 +1,4 @@
-const { Client } = require('discord.js');
+const { Client, MessageEmbed } = require('discord.js');
 
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
@@ -34,16 +34,15 @@ client.on('message', message => {
     new Dice( message, client).selector()
 })
 
-const channelId = '862785768870641704'
-
 client.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    const message = `Souhaitez la bienvenue à <@${member.id}> to the server !`
+    const embed = new MessageEmbed()
+        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
+        .setColor("#f16179")
+        .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`)
 
-    const channel = member.guild.channels.cache.get(channelId)
-    channel.send(message)
-    
+    client.channels.cache.get('862785768870641704').send(embed)
 })
 
-client.login(process.env.TOKEN);
+client.login(Process.env.TOKEN);
