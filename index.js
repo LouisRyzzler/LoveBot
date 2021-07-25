@@ -34,6 +34,7 @@ client.on('message', message => {
     new Dice( message, client).selector()
 })
 
+const InviteId = '868906645277769758'
 const channelId = '862785768870641704'
 
 client.on('guildMemberAdd', (member) => {
@@ -47,9 +48,36 @@ client.on('guildMemberAdd', (member) => {
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed)
+
+    guild.fetchInvites().then((invites) => {
+        const inviteCounter = {}
+
+        invites.forEach((invite) => {
+            const { uses, inviter } = invite
+            const { username, discriminator } = inviter
+
+            const name = `${username}#${discriminator}`
+
+            inviteCounter[name] = (inviteCounter[name] || 0) + uses
+        })
+
+        let replyText = 'Invites:'
+
+        for (const invite in inviteCounter) {
+            const count = inviteCounter[invite]
+            replyText += `\n${invite} a invité ${count} membre(s) !`
+        }
+
+        message.reply(
+            new MessageEmbed()
+            .setColor("#f16179")
+            .setDescription(`${invite} a invité ${count} membre(s) !`)
+        )
+    })
+
 })
 
-const channelId = '868906645277769758'
+const InviteId = '868906645277769758'
 
 client.on('guildMemberAdd', (member) => {
     const { guild } = member
