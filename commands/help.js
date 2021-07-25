@@ -29,7 +29,6 @@ class Help {
             if(this.args[0] === PREFIX + "help") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
                         .attachFiles(exclamation)
                         .setThumbnail('attachment://exclamation.png')
