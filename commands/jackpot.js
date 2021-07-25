@@ -31,7 +31,7 @@ class Jackpot {
                 if(this.args[0] === PREFIX + "jackpot") {
                     this.message.channel.send(
                         new MessageEmbed()
-                            .setTitle("1.0.3")
+                            .setTitle("Casino")
                             .setColor("#f16179")
                             .attachFiles(jackpotImg)
                             .setThumbnail('attachment://jackpot.jpg')
