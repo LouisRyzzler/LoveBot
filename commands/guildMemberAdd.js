@@ -10,6 +10,9 @@ class guildMemberAdd {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
+                case PREFIX + "guildMemberAdd":
+                    this.guildMemberAdd(); 
+                    break; 
             }
         }
     }
