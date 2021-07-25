@@ -13,7 +13,7 @@ const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
-
+const { guildMemberAdd } = require('./commands/guildMemberAdd.js')
 
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
@@ -32,6 +32,7 @@ client.on('message', message => {
     new Help( message, client).selector()
     new Casino( message, client).selector()
     new Dice( message, client).selector()
+    new guildMemberAdd( message, client).selector()
 })
 
 client.login(process.env.TOKEN);
