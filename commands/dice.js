@@ -3,7 +3,7 @@ const diceImg = new MessageAttachment('./assets/img/dice.png');
 const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
 const { PREFIX } = require("../config");
 
-class Casino {
+class Dice {
     constructor(message, client) {
         this.client = client;
         this.message = message;
@@ -46,5 +46,5 @@ class Casino {
 }
 
 module.exports ={
-    Casino
+    Dice
 }
