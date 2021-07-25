@@ -34,21 +34,18 @@ client.on('message', message => {
     new Dice( message, client).selector()
 })
 
+const channelId = '862785768870641704'
+
 client.on('guildMemberAdd', (member) => {
     console.log(member)
+    
+    const embed =  new MessageEmbed()
+        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
+        .setColor("#f16179")
+        .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`);
 
-    let guild = this.client.guilds.cache.some(fn => fn.id === "862781120540835901") ? this.client.guilds.cache.get("862781120540835901") : null;
-    if(guild !== null) {
-        let channel = guild.channels.cache.some(fn => fn.id === "862785768870641704") ? guild.channels.cache.get("862785768870641704") : null;
-        if(channel !== null) {
-            channel.send(
-                 new MessageEmbed()
-                .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
-                .setColor("#f16179")
-                .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`)
-            )
-        }
-    }
+    const channel = member.guild.channels.cache.get(channelId)
+    channel.send(embed)
 })
 
 client.login(process.env.TOKEN);
