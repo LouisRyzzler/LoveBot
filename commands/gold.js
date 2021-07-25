@@ -31,11 +31,9 @@ class Gold {
                     new MessageEmbed()
                         .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
-                        .attachFiles(trophe)
-                        .setThumbnail('attachment://trophé.png')
                         .addFields(
                             { name: "Comment obtenir le rôle Sweety Gold ?", value: "Inviter 3 personnes sur le serveur vous permettra d'obtenir le rôle <@&868813991630237706>", inline: false },
-                            { name: "Avantages", value: "<:pointer:863335546751287306> Vous aurez un rôle affiché séparément des autres \n<:pointer:863335546751287306> Vous pourrez changer vôtre pseudo. \n<:pointer:863335546751287306> Vous aurez la possibilité de masquer le channel <#862785241604685857>. Faites vôte demande auprès du staff si vous voulez cacher ce salon. \n\nPour voir où en sont vos invitations, tapez ``-invites``." }
+                            { name: "Avantages", value: "<:pointer:863335546751287306> Vous aurez un rôle affiché séparément des autres \n<:pointer:863335546751287306> Vous pourrez changer vôtre pseudo. \n<:pointer:863335546751287306> Vous aurez la possibilité de masquer le channel <#862785241604685857>. Faites vôtre demande auprès du staff si vous voulez cacher ce salon. \n\nPour voir où en sont vos invitations, tapez ``-invites``." }
                         )
                 )
             }  
