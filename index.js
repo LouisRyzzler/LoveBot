@@ -48,33 +48,6 @@ client.on('guildMemberAdd', (member) => {
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed)
-
-    guild.fetchInvites().then((invites) => {
-        const inviteCounter = {}
-
-        invites.forEach((invite) => {
-            const { uses, inviter } = invite
-            const { username, discriminator } = inviter
-
-            const name = `${username}#${discriminator}`
-
-            inviteCounter[name] = (inviteCounter[name] || 0) + uses
-        })
-
-        let replyText = 'Invites:'
-
-        for (const invite in inviteCounter) {
-            const count = inviteCounter[invite]
-            replyText += `\n${invite} a invité ${count} membre(s) !`
-        }
-
-            const embed2 = new MessageEmbed()
-            .setColor("#f16179")
-            .setDescription(`${invite} a invité ${count} membre(s) !`);
-            const channel2 = member.guild.channels.cache.get(InviteId)
-            channel2.send(embed2)
-    })
-
 })
 
 client.login(process.env.TOKEN);
