@@ -1,6 +1,5 @@
 const { MessageEmbed } = require("discord.js");
 const { PREFIX } = require("../config");
-const channelId = '862785768870641704'
 
 class AddMember {
     constructor(message, client) {
@@ -23,6 +22,7 @@ class AddMember {
 
 
     AddMember() {
+        const channelId = '862785768870641704'
         const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
