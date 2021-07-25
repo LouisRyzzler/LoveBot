@@ -27,7 +27,7 @@ class Help {
             
             this.message.delete().then().catch(console.error)
             if(this.args[0] === PREFIX + "help") {
-                this.message.send(
+                    message.send(
                     new MessageEmbed()
                         .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
