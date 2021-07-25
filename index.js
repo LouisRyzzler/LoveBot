@@ -42,7 +42,7 @@ client.on('guildMemberAdd', (member) => {
     const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
-        .setDescription("Bienvenue sur Sweety ``🍎``\n\n N'hésite pas à poster ton profil dans le salon <#862784305439834142> \net à faire le max de rencontres tout en amusant !")
+        .setFooter("Bienvenue sur Sweety ``🍎``")
         .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
