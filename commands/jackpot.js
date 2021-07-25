@@ -35,7 +35,11 @@ class Casino {
                             .setColor("#f16179")
                             .attachFiles(jackpotImg)
                             .setThumbnail('attachment://jackpot.jpg')
-                            .setDescription(randomDice() || randomDice() || randomDice())
+                            .addFields(
+                                { name: '#', value: randomDice(), inline: true },
+                                { name: '#', value: randomDice(), inline: true },
+                                { name: '#', value: randomDice(), inline: true }
+                            )
                     )
                 }
             }    
