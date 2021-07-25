@@ -3,7 +3,7 @@ const jackpotImg = new MessageAttachment('./assets/img/jackpot.jpg');
 const randomDice = () => Math.floor(Math.random() * 7 ) + 1;
 const { PREFIX } = require("../config");
 
-class Jackpot {
+class Casino {
     constructor(message, client) {
         this.client = client;
         this.message = message;
@@ -14,8 +14,8 @@ class Jackpot {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "jackpot":
-                    this.Jackpot(); 
+                case PREFIX + "casino":
+                    this.Casino(); 
                     break; 
             }
         }
@@ -23,12 +23,12 @@ class Jackpot {
 
 
 
-    Jackpot() {
+    Casino() {
         if(this.message.channel.id !== this.client.user.id) {
             if(this.message.channel.id === "868776883284758619") { 
                 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "jackpot") {
+                if(this.args[0] === PREFIX + "casino") {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setTitle("Casino")
@@ -48,5 +48,5 @@ class Jackpot {
 }
 
 module.exports ={
-    Jackpot
+    Casino
 }
