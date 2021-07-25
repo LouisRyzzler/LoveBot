@@ -37,9 +37,10 @@ class Casino {
                             .setThumbnail('attachment://jackpot.jpg')
                             .addFields(
                                 { name: '#', value: randomDice(), inline: true },
-                                { name: '#', value: randomDice(), inline: true},
-                                { name: '#', value: randomDice(), inline: true}
+                                { name: '#', value: randomDice(), inline: true },
+                                { name: '#', value: randomDice(), inline: true }
                             )
+                            .setFooter(this.message.author.username, this.message.author.avatarURL())
                     )
                 }
             }    
