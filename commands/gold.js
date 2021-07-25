@@ -29,7 +29,6 @@ class Gold {
             if(this.args[0] === PREFIX + "gold") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setAuthor(this.message.guild.name, this.message.guild.iconURL())
                         .setColor("#f16179")
                         .addFields(
                             { name: "Comment obtenir le rôle Sweety Gold ?", value: "Inviter 3 personnes sur le serveur vous permettra d'obtenir le rôle <@&868813991630237706>", inline: false },
