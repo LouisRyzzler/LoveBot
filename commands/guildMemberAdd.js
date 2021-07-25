@@ -1,11 +1,17 @@
-const { MessageEmbed, MessageAttachment } = require("discord.js");
-const { PREFIX } = require("../config");
+const { MessageEmbed } = require("discord.js");
 
 class guildMemberAdd {
     constructor(message, client) {
         this.client = client;
         this.message = message;
         this.args = message.content.slice().split(/ /).filter(element => element !== '');
+    }
+
+    selector() {
+        if(this.message.author.id !== this.client.user.id) {
+            switch(this.args[0]) {
+            }
+        }
     }
 
     guildMemberAdd() {
@@ -22,6 +28,6 @@ class guildMemberAdd {
     }
 }
 
-module.exports ={
+module.exports = {
     guildMemberAdd
 }

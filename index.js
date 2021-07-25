@@ -32,7 +32,10 @@ client.on('message', message => {
     new Help( message, client).selector()
     new Casino( message, client).selector()
     new Dice( message, client).selector()
-    new guildMemberAdd( message, client).selector()
+})
+
+client.on('guildMemberAdd', member => {
+    new guildMemberAdd( member, client).selector()
 })
 
 client.login(process.env.TOKEN);
