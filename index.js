@@ -14,6 +14,7 @@ const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
 
+
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
 });
@@ -36,7 +37,7 @@ client.on('message', message => {
 const channelId = '862785768870641704'
 
 client.on('guildMemberAdd', (member) => {
-    new AddMember( member, client).selector()
+    console.log(member)
     
     const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
