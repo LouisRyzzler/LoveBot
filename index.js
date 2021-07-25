@@ -37,12 +37,18 @@ client.on('message', message => {
 client.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    const embed = new MessageEmbed()
-        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
-        .setColor("#f16179")
-        .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`)
-
-    client.channels.cache.get('862785768870641704').send(embed)
+    let guild = this.client.guilds.cache.some(fn => fn.id === "862781120540835901") ? this.client.guilds.cache.get("862781120540835901") : null;
+    if(guild !== null) {
+        let channel = guild.channels.cache.some(fn => fn.id === "862785768870641704") ? guild.channels.cache.get("862785768870641704") : null;
+        if(channel !== null) {
+            channel.send(
+                 new MessageEmbed()
+                .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
+                .setColor("#f16179")
+                .setDescription(`Souhaitez la bienvenue à ${member.displayName} !`)
+            )
+        }
+    }
 })
 
 client.login(Process.env.TOKEN);
