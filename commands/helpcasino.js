@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
-const dice = new MessageAttachment('./assets/img/dice.png');
-const jackpot = new MessageAttachment('./assets/img/jackpot.png');
+const dice1 = new MessageAttachment('./assets/img/dice.png');
+const jackpot1 = new MessageAttachment('./assets/img/jackpot.png');
 const { PREFIX } = require("../config");
 
 class Helpcasino {
@@ -31,7 +31,7 @@ class Helpcasino {
                 this.message.channel.send(
                     new MessageEmbed()
                         .setColor("#f16179")
-                        .attachFiles(jackpot)
+                        .attachFiles(jackpot1)
                         .setThumbnail('attachmeent://jackpot.png')
                         .addFields(
                             { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino`.", inline: true },
@@ -41,7 +41,7 @@ class Helpcasino {
                 this.message.channel.send(
                     new MessageEmbed()
                         .setColor("#f16179")
-                        .attachFiles(dice)
+                        .attachFiles(dice1)
                         .setThumbnail('attachment://dice.png')
                         .addFields(
                             { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
