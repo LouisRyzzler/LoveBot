@@ -31,7 +31,7 @@ class Boost {
                         .setColor("#f16179")
                         .addFields(
                             {name:"Comment obtenir le rôle Boosteur", value:"Booster le serveur une seule fois suffit pour obtenir le rôle ainsi que ses avantages.", inline: false},
-                            {name:"Avantages", value:"", inline: false}
+                            {name:"Avantages", value:"<:pointer:863335546751287306> Vous obtenez tous les avantages du rôle <@&868813991630237706>.\n<:pointer:863335546751287306> ", inline: false}
                         )
                 )
             }  
