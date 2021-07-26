@@ -14,6 +14,8 @@ const { Help } = require('./commands/help.js');
 const { Casino } = require('./commands/jackpot.js');
 const { Dice } = require('./commands/dice.js')
 const { Gold } = require('./commands/gold.js')
+const { Boost } = require('./commands/boost.js')
+
 
 
 
@@ -35,6 +37,8 @@ client.on('message', message => {
     new Casino( message, client).selector()
     new Dice( message, client).selector()
     new Gold( message, client).selector()
+    new Boost( message, client).selector()
+
 
 })
 
