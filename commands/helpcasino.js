@@ -39,7 +39,7 @@ class Helpcasino {
                         .setColor("#f16179")
                         .addFields(
                             { name: "Les dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
-                            { name: "Comment gagner aux dés ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `0`. En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
+                            { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `0`. En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
                         )
                         .setFooter(this.message.author.username, this.message.author.avatarURL())
                 )
