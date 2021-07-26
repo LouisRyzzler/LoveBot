@@ -31,7 +31,7 @@ class Update {
                         new MessageEmbed()
                             .setTitle("1.0.5")
                             .setColor("#f16179")
-                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\n Sorti de la commande `!helpcasino`, ainsi vous aurez toutes les infos concernant le casino.\n\nRôle `Boost`. Pour l'obtenir boostez le serveur au moins uen fois. \n\nRe-redisgn de la commande `!help`.")
+                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\n Sorti de la commande `!helpcasino`, ainsi vous aurez toutes les infos concernant le casino.\n\nRôle <@&868148015595143189>. Pour l'obtenir boostez le serveur au moins une fois. \n\nRe-redisgn de la commande `!help`.")
                     ).then(async (message) => {
                         await message.react('<:update:863386248734179338>').then().catch(console.error);
 
