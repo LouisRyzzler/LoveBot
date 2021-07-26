@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageAttachment } = require("discord.js");
 const dice1 = new MessageAttachment('./assets/img/dice.png');
 const jackpot1 = new MessageAttachment('./assets/img/jackpot.jpg');
 const { PREFIX } = require("../config");
