@@ -31,14 +31,14 @@ class Helpcasino {
                         .setColor("#f16179")
                         .addFields(
                             { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino`.", inline: true },
-                            { name: "Comment ganger ?", value: "Pour ganger au jeu du casino, il vous suffit d'obtenir la suite de numéros `7 7 7`.\n\n En récompense un rôle personnalisé vous sera attribué, toutes demadnes est à faire auprès d'un administateur.", inline: true}
+                            { name: "Comment ganger ?", value: "Pour ganger au jeu du casino, il vous suffit d'obtenir la suite de numéros `7 7 7`.\n\n En récompense un rôle personnalisé vous sera attribué, toutes demandes est à faire auprès d'un administateur.", inline: true}
                         )
                 )
                 this.message.channel.send(
                     new MessageEmbed()
                         .setColor("#f16179")
                         .addFields(
-                            { name: "Les dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
+                            { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
                             { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `0`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
                         )
                         .setFooter(this.message.author.username, this.message.author.avatarURL())
