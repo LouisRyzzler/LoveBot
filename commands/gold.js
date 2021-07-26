@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const boost2 = new MessageAttachment('./assets/img/boost 2.gif');
+const boost2 = new MessageAttachment('./assets/img/boost2.gif');
 const { PREFIX } = require("../config");
 
 class Gold {
@@ -31,7 +31,7 @@ class Gold {
                     new MessageEmbed()
                         .setColor("#f16179")
                         .attachFiles(boost2)
-                        .setThumbnail('attachment://boost 2.gif')
+                        .setThumbnail('attachment://boost2.gif')
                         .addFields(
                             { name: "Comment obtenir le rôle Sweety Gold ?", value: "Inviter 3 personnes sur le serveur vous permettra d'obtenir le rôle <@&868813991630237706>", inline: false },
                             { name: "Avantages", value: "<:pointer:863335546751287306> Vous aurez un rôle affiché séparément des autres \n<:pointer:863335546751287306> Vous pourrez changer votre pseudo. \n<:pointer:863335546751287306> Vous pourrez poster des GIF dans le salon <#862785768870641704>. \n<:pointer:863335546751287306> Vous aurez la possibilité de masquer le channel <#862785241604685857>. Faites votre demande auprès du staff si vous voulez cacher ce salon. \n\nPour voir où en sont vos invitations, tapez `-invites`." }
