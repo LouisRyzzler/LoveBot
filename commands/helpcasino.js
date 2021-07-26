@@ -1,4 +1,6 @@
 const { MessageEmbed } = require("discord.js");
+const dice = new MessageAttachment('./assets/img/dice.png');
+const jackpot = new MessageAttachment('./assets/img/jackpot.png');
 const { PREFIX } = require("../config");
 
 class Helpcasino {
@@ -29,6 +31,8 @@ class Helpcasino {
                 this.message.channel.send(
                     new MessageEmbed()
                         .setColor("#f16179")
+                        .attachFiles(jackpot)
+                        .setThumbnail('attachmeent://jackpot.png')
                         .addFields(
                             { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino`.", inline: true },
                             { name: "Comment ganger ?", value: "Pour ganger au jeu du casino, il vous suffit d'obtenir la suite de numéros `7 7 7`.\n\n En récompense un rôle personnalisé vous sera attribué, toutes demandes est à faire auprès d'un administateur.", inline: true}
@@ -37,6 +41,8 @@ class Helpcasino {
                 this.message.channel.send(
                     new MessageEmbed()
                         .setColor("#f16179")
+                        .attachFiles(dice)
+                        .setThumbnail('attachment://dice.png')
                         .addFields(
                             { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
                             { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `0`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
