@@ -32,7 +32,7 @@ class Gold {
                         .setColor("#f16179")
                         .addFields(
                             { name: "Comment obtenir le rôle Sweety Gold ?", value: "Inviter 3 personnes sur le serveur vous permettra d'obtenir le rôle <@&868813991630237706>", inline: false },
-                            { name: "Avantages", value: "<:pointer:863335546751287306> Vous aurez un rôle affiché séparément des autres \n<:pointer:863335546751287306> Vous pourrez changer votre pseudo. \n<:pointer:863335546751287306> Vous aurez la possibilité de masquer le channel <#862785241604685857>. Faites votre demande auprès du staff si vous voulez cacher ce salon. \n<:pointer:863335546751287306> Vous pourrez poster des GIF dans le salon <#862785768870641704>.  \n\nPour voir où en sont vos invitations, tapez **-invites**." }
+                            { name: "Avantages", value: "<:pointer:863335546751287306> Vous aurez un rôle affiché séparément des autres \n<:pointer:863335546751287306> Vous pourrez changer votre pseudo. \n<:pointer:863335546751287306> Vous pourrez poster des GIF dans le salon <#862785768870641704>. \n<:pointer:863335546751287306> Vous aurez la possibilité de masquer le channel <#862785241604685857>. Faites votre demande auprès du staff si vous voulez cacher ce salon. \n\nPour voir où en sont vos invitations, tapez **-invites**." }
                         )
                         .setFooter(this.message.author.username, this.message.author.avatarURL())
                 )

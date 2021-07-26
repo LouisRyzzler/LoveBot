@@ -38,6 +38,7 @@ class Help {
                             { name: "Rôles", value: "<:pointer:863335546751287306> <@&868813991630237706> ce rôle s'obtient en invitant **3** personnes sur le serveur. Taper la commande **!gold** pour voir tous les avantages de ce rôle.\n\n <:pointer:863335546751287306> <@&868148015595143189> ce rôle s'obtient en boostant le serveur. Taper la commande **!booster** pour voir tous les avantages de ce rôle."},
                             { name: "Liens utiles", value: "<:pointer:863335546751287306> Invitation du serveur: https://discord.gg/c56RxVhfr\n <:pointer:863335546751287306> Serveur secondaire: https://discord.gg/u8juXJapRQ", inline: false }
                         )
+                        .setFooter(this.message.author.username, this.message.author.avatarURL())
                 )
             }
     }
