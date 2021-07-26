@@ -122,6 +122,7 @@ class Rencontre {
                                                                     .setThumbnail('attachment://84451.png')
                                                                     .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                     .setFooter(this.message.guild.name, this.message.guild.iconURL()) 
+                                                                    .setTimestamp()
                                                                 ).then(async (message) => {
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
@@ -189,6 +190,7 @@ class Rencontre {
                                                                 .setThumbnail('attachment://7889.png')
                                                                 .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                 .setFooter(this.message.guild.name, this.message.guild.iconURL())
+                                                                .setTimestamp()
                                                                 ).then(async (message) => {
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
@@ -256,6 +258,7 @@ class Rencontre {
                                                                 .setThumbnail('attachment://5556.png')
                                                                 .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                 .setFooter(this.message.guild.name, this.message.guild.iconURL())
+                                                                .setTimestamp()
                                                                 ).then(async (message) => {
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
@@ -323,6 +326,7 @@ class Rencontre {
                                                                     .setThumbnail('attachment://765560.png')
                                                                     .setImage(reponse.first().attachments.array()[0].proxyURL)
                                                                     .setFooter(this.message.guild.name, this.message.guild.iconURL())
+                                                                    .setTimestamp()
                                                                 ).then(async (message) => {
                                                                     await message.react('❤️').then().catch(console.error);
                                                                     await message.react('💛').then().catch(console.error);
