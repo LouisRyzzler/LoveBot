@@ -29,9 +29,9 @@ class Update {
                 if(this.args[0] === PREFIX + "update") {
                     this.message.channel.send(
                         new MessageEmbed()
-                            .setTitle("1.0.5")
+                            .setTitle("1.0.7")
                             .setColor("#f16179")
-                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\n Sorti de la commande `!helpcasino`, ainsi vous aurez toutes les infos concernant le casino.\n\nRôle <@&868148015595143189>. Pour l'obtenir boostez le serveur au moins une fois. \n\nRe-redisgn de la commande `!help`.")
+                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\n Racourci de la commande `!casino`, vous pouvez désormais l'écrire de ces manières: `!casino` ou `!c`. La raison -> Gain de temps. \n\n Mise à jour de la commande `!helpcasino`.")
                     ).then(async (message) => {
                         await message.react('<:update:863386248734179338>').then().catch(console.error);
 

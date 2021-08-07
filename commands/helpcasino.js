@@ -34,7 +34,7 @@ class Helpcasino {
                         .attachFiles(jackpot1)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(
-                            { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino`.", inline: true },
+                            { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino` ou `!c`.", inline: true },
                             { name: "Comment ganger ?", value: "Pour ganger au jeu du casino, il vous suffit d'obtenir la suite de numéros `7 7 7`.\n\n En récompense un rôle personnalisé vous sera attribué, toutes demandes est à faire auprès d'un administateur.", inline: true}
                         )
                 )
