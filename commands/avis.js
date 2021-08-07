@@ -34,7 +34,7 @@ class Avis {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setTitle("Laisse un avis sur Sweety `🍎` !")
+                            .setTitle("Laisse un avis sur Sweety")
                             .setDescription("```Pour laisser un avis sur Sweety il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
@@ -84,7 +84,7 @@ class Avis {
                                             .attachFiles(zeroImg)
                                             .setThumbnail('attachment://0.png')
                                             .setTimestamp()
-                                            .setFooter("Tape pour !avis pour noter le serveur.")
+                                            .setFooter("Tape !avis pour noter le serveur.")
 
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
@@ -107,6 +107,7 @@ class Avis {
                                             .attachFiles(unImg)
                                             .setThumbnail('attachment://1.png')
                                             .setTimestamp()
+                                            .setFooter("Tape !avis pour noter le serveur.")
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
 
@@ -128,6 +129,7 @@ class Avis {
                                             .attachFiles(deuxImg)
                                             .setThumbnail('attachment://2.png')    
                                             .setTimestamp()
+                                            .setFooter("Tape !avis pour noter le serveur.")
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
 
@@ -149,6 +151,7 @@ class Avis {
                                             .attachFiles(troisImg)
                                             .setThumbnail('attachment://3.png')   
                                             .setTimestamp()
+                                            .setFooter("Tape !avis pour noter le serveur.")
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
 
@@ -170,6 +173,7 @@ class Avis {
                                             .attachFiles(quatreImg)
                                             .setThumbnail('attachment://4.png')   
                                             .setTimestamp()
+                                            .setFooter("Tape !avis pour noter le serveur.")
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
 
@@ -191,6 +195,7 @@ class Avis {
                                             .attachFiles(cinqImg)
                                             .setThumbnail('attachment://5.png')   
                                             .setTimestamp()
+                                            .setFooter("Tape !avis pour noter le serveur.")
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
 
