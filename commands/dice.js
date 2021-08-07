@@ -40,6 +40,20 @@ class Dice {
                             )
                     )
                 }
+
+                this.message.delete().then().catch(console.error)
+                if(this.args[0] === PREFIX + "d") {
+                    this.message.channel.send(
+                        new MessageEmbed()
+                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                            .setColor("#f16179")
+                            .attachFiles(diceImg)
+                            .setThumbnail('attachment://dice.png')
+                            .addFields(
+                                { name: '#', value: randomDice(), inline: true }
+                            )
+                    )
+                }
             }    
         }
     }
