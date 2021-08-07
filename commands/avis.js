@@ -84,6 +84,7 @@ class Avis {
                                             .attachFiles(zeroImg)
                                             .setThumbnail('attachment://0.png')
                                             .setTimestamp()
+                                            .setFooter("Tape pour !avis pour noter le serveur.")
 
                                     ).then(async (message) => {
                                         await message.react('❤️').then().catch(console.error);
