@@ -11,15 +11,13 @@ const { Color1 } = require('./commands/color1.js');
 const { Color2 } = require('./commands/color2.js');
 const { Informations } = require('./commands/informations.js');
 const { Help } = require('./commands/help.js');
-const { Casino } = require('./commands/jackpot.js');
+const { Casino } = require('./commands/casino.js');
 const { Dice } = require('./commands/dice.js')
 const { Gold } = require('./commands/gold.js')
 const { Boost } = require('./commands/boost.js')
 const { Helpcasino } = require('./commands/helpcasino.js')
 const { D } = require('./commands/d.js')
-
-
-
+const { C } = require('./commands/c.js')
 
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
@@ -42,6 +40,8 @@ client.on('message', message => {
     new Boost( message, client).selector()
     new Helpcasino( message, client).selector()
     new D( message, client).selector()
+    new C( message, client).selector()
+
 
 
 
