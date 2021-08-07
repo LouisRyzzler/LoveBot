@@ -3,7 +3,7 @@ const diceImg = new MessageAttachment('./assets/img/dice.png');
 const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
 const { PREFIX } = require("../config");
 
-class Dice {
+class D {
     constructor(message, client) {
         this.client = client;
         this.message = message;
@@ -14,8 +14,8 @@ class Dice {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "dice":
-                    this.Dice(); 
+                case PREFIX + "d":
+                    this.D(); 
                     break; 
             }
         }
@@ -23,12 +23,12 @@ class Dice {
 
 
 
-    Dice() {
+    D() {
         if(this.message.channel.id !== this.client.user.id) {
             if(this.message.channel.id === "868776883284758619") { 
                 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "dice") {
+                if(this.args[0] === PREFIX + "d") {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -46,5 +46,5 @@ class Dice {
 }
 
 module.exports ={
-    Dice
+    D
 }
