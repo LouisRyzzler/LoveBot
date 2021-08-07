@@ -28,16 +28,16 @@ class Rencontre {
             if(this.message.channel.id === "862784305439834142") {
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "Rencontre")
+                if(this.args[0] === PREFIX + "Rencontre") {}
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + " rencontre")
+                if(this.args[0] === PREFIX + " rencontre") {}
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + " Rencontre")
+                if(this.args[0] === PREFIX + " Rencontre") {}
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "rencontres")
+                if(this.args[0] === PREFIX + "rencontres") {}
 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "rencontre") {
