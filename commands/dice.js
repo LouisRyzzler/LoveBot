@@ -38,6 +38,7 @@ class Dice {
                             .addFields(
                                 { name: '#', value: randomDice(), inline: true }
                             )
+                            .setFooter("Tape !dice pour jouer.")
                     )
                 }
             }    
