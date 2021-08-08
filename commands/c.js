@@ -40,6 +40,7 @@ class C {
                                 { name: '#', value: randomDice(), inline: true },
                                 { name: '#', value: randomDice(), inline: true }
                             )
+                            .setFooter("Tape !casino ou !c pour jouer.")
                     )
                 }
             }    
