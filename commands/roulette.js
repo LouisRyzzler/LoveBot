@@ -30,7 +30,7 @@ class Roulette {
                     this.message.delete().then().catch(console.error)
                     if(this.args[0] === PREFIX + "roulette") {
 
-                        if(randomDice === 1) {
+                        if(randomDice() = 1) {
                             this.message.channel.send(
                                 new MessageEmbed()
                                     .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -44,7 +44,7 @@ class Roulette {
                             )
                         }
 
-                        if(randomDice === 2) {
+                        if(randomDice() = 2) {
                             this.message.channel.send(
                                 new MessageEmbed()
                                     .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -58,7 +58,7 @@ class Roulette {
                             )
                         }
 
-                        if(randomDice === 3) {
+                        if(randomDice() = 3) {
                             this.message.channel.send(
                                 new MessageEmbed()
                                     .setAuthor(this.message.author.username, this.message.author.avatarURL())
