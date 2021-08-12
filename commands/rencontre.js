@@ -134,7 +134,7 @@ class Rencontre {
                                                                     await message.awaitReactions(filter, {
                                                                         max: 1,
                                                                         errors: ["max"]
-                                                                    })
+                                                                    })     
                                                                 })
                                                             }
                                                         }

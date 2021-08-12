@@ -17,6 +17,8 @@ const { Gold } = require('./commands/gold.js')
 const { Boost } = require('./commands/boost.js')
 const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
+const { Roulette } = require('./commands/roulette.js')
+
 
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
@@ -39,6 +41,7 @@ client.on('message', message => {
     new Boost( message, client).selector()
     new Helpcasino( message, client).selector()
     new C( message, client).selector()
+    new Roulette( message, client).selector()
 
 
 
