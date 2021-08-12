@@ -15,7 +15,7 @@ class Roulette {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
                 case PREFIX + "roulette":
-                    this.Dice(); 
+                    this.Roulette(); 
                     break; 
             }
         }
@@ -23,7 +23,7 @@ class Roulette {
 
 
 
-    Dice() {
+    Roulette() {
         if(this.message.channel.id !== this.client.user.id) {
             if(this.message.channel.id === "868776883284758619") { 
 
