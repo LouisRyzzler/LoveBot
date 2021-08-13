@@ -1,6 +1,7 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const diceImg = new MessageAttachment('./assets/img/dice.png');
-const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
+const bleu = new MessageAttachment('./assets/img/bleu.png');
+const rouge = new MessageAttachment('./assets/img/rouge.png');
+const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
 const { PREFIX } = require("../config");
 
 class Roulette {
@@ -30,48 +31,77 @@ class Roulette {
                     this.message.delete().then().catch(console.error)
                     if(this.args[0] === PREFIX + "roulette") {
 
-                        if(randomDice() = 1) {
-                            this.message.channel.send(
-                                new MessageEmbed()
-                                    .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                    .setColor("#f16179")
-                                    .attachFiles(diceImg)
-                                    .setThumbnail('attachment://dice.png')
-                                    .addFields(
-                                        { name: '#', value: 'égale à 1', inline: true }
-                                    )
-                                    .setFooter("Tape !roulette pour jouer.")
-                            )
-                        }
+                        this.message.channel.send(
+                            new MessageEmbed()
+                                .setColor("#f16179")
+                                .setTitle("La roulette")
+                                .setDescription("```Mise sur le rouge ou sur le bleu```")
+                        ).then(async (message) => {
+                            await message.react('🔴').then().catch(console.error);
+                            await message.react('🔵').then().catch(console.error);
 
-                        if(randomDice() = 2) {
-                            this.message.channel.send(
-                                new MessageEmbed()
-                                    .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                    .setColor("#f16179")
-                                    .attachFiles(diceImg)
-                                    .setThumbnail('attachment://dice.png')
-                                    .addFields(
-                                        { name: '#', value: 'égale à 2', inline: true }
-                                    )
-                                    .setFooter("Tape !roulette pour jouer.")
-                            )
-                        }
+                            const filter = (reaction, user) => reaction.emoji.name === "🔴" ||
+                                reaction.emoji.name === "🔵" &&
+                                user.id === this.message.author.id;
 
-                        if(randomDice() = 3) {
-                            this.message.channel.send(
-                                new MessageEmbed()
-                                    .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                    .setColor("#f16179")
-                                    .attachFiles(diceImg)
-                                    .setThumbnail('attachment://dice.png')
-                                    .addFields(
-                                        { name: '#', value: 'jai chié', inline: true }
-                                    )
-                                    .setFooter("Tape !roulette pour jouer.")
-                            )
-                        }
-                    }   
+                                await message.awaitReactions(filter, {
+                                    max: 1,
+                                    errors: ["max"]
+                                }).then(async collected => {
+                                    switch (collected.first().emoji.name) {
+                                        case "🔴":
+                                            if(randomDice() === 1) {
+                                                this.message.channel.send(
+                                                    new MessageEmbed()
+                                                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                                        .setColor("#f16179")
+                                                        .attachFiles(bleu)
+                                                        .setThumbnail('attachment://bleu.png')
+                                                        .setDescription("Tu as perdu")
+                                                        .setFooter("Tape !roulette pour jouer.")
+                                                );
+                                            };
+                                            if(randomDice() === 2) {
+                                                this.message.channel.send(
+                                                    new MessageEmbed()
+                                                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                                        .setColor("#f16179")
+                                                        .attachFiles(rouge)
+                                                        .setThumbnail('attachment://rouge.png')
+                                                        .setDescription("Tu as gagné")
+                                                        .setFooter("Tape !roulette pour jouer.")
+                                                );
+                                            };
+                                            
+                                            break
+                                        case "🔵":
+                                            if(randomDice() === 1) {
+                                                this.message.channel.send(
+                                                    new MessageEmbed()
+                                                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                                        .setColor("#f16179")
+                                                        .attachFiles(bleu)
+                                                        .setThumbnail('attachment://bleu.png')
+                                                        .setDescription("Tu as gagné")
+                                                        .setFooter("Tape !roulette pour jouer.")
+                                                );
+                                            };
+                                            if(randomDice() === 2) {
+                                                this.message.channel.send(
+                                                    new MessageEmbed()
+                                                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                                        .setColor("#f16179")
+                                                        .attachFiles(rouge)
+                                                        .setThumbnail('attachment://rouge.png')
+                                                        .setDescription("Tu as perdu")
+                                                        .setFooter("Tape !roulette pour jouer.")
+                                                );
+                                            };
+                                            break
+                                    }
+                                })
+                            });
+                    }
             }    
         }
     }

@@ -43,9 +43,6 @@ client.on('message', message => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
 
-
-
-
 })
 
 const channelId = '862785768870641704'
@@ -63,4 +60,4 @@ client.on('guildMemberAdd', (member) => {
     channel.send(embed)
 })
 
-client.login(process.env.TOKEN);
+client.login('ODYxNTQ5NTY5Mjk2MDM5OTM3.YOLakA.bzZkLRP-caVfB3-ZzxupI_RoFvA');

@@ -1,6 +1,7 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const dice1 = new MessageAttachment('./assets/img/dice.png');
 const jackpot1 = new MessageAttachment('./assets/img/jackpot.jpg');
+const roulette = new MessageAttachment('./assets/img/roulette.png');
 const { PREFIX } = require("../config");
 
 class Helpcasino {
@@ -45,9 +46,18 @@ class Helpcasino {
                         .setThumbnail('attachment://dice.png')
                         .addFields(
                             { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
-                            { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `0`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
+                            { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `1`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
                         )
-                        .setFooter(this.message.author.username, this.message.author.avatarURL())
+                )
+                this.message.channel.send(
+                    new MessageEmbed()
+                        .setColor("#f16179")
+                        .attachFiles(roulette)
+                        .setThumbnail('attachment://roulette.png')
+                        .addFields(
+                            { name: "La roulette", value: "Pour jouer à la roulette, allez dans le channel <#868776883284758619> et tapez la commande `!roulette`.", inline: true},
+                            { name: "Comment gagner ?", value: "Pour gagner à la roulette, il vous suffit de miser sur une couleur et de tomber dessus.\n\n Récompense reste à déterminer.", inline: false, inline: true}
+                        )
                 )
             }
     }
