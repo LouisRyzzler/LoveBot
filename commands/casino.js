@@ -23,8 +23,8 @@ class Casino {
 
 
 
-    Casino() {
-        if(this.message.channel.id !== this.client.user.id) {
+    Casino() {console.log("bite");
+        if(this.message.channel.id !== this.client.user.id) {s
             if(this.message.channel.id === "868776883284758619") { 
                 
                 this.message.delete().then().catch(console.error)
@@ -45,7 +45,7 @@ class Casino {
                         await message.react('➕').then().catch(console.error);
       
                         const filter = (reaction, user) => reaction.emoji.name === "➕" &&
-                            user.id === this.message.author.id.then().catch(console.log)
+                            user.id === this.message.author.id;
 
                             await message.awaitReactions(filter, {
                                 max: 1,
