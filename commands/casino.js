@@ -23,7 +23,7 @@ class Casino {
 
 
 
-    Casino() {console.log("bite");
+    Casino() {
         if(this.message.channel.id !== this.client.user.id) {s
             if(this.message.channel.id === "868776883284758619") { 
                 
