@@ -28,7 +28,7 @@ class Casino {
             if(this.message.channel.id === "868776883284758619") { 
                 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "casino") { const casino =
+                if(this.args[0] === PREFIX + "casino") {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -50,11 +50,6 @@ class Casino {
                             await message.awaitReactions(filter, {
                                 max: 1,
                                 errors: ["max"]
-                            }).then(async collected => {
-                                switch (collected.first().emoji.name) {
-                                    case "➕":
-                                        casino
-                                }
                             })
                     })     
 
