@@ -34,7 +34,7 @@ class Avis {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setTitle("Laisse un avis sur Sweety")
+                            .setTitle("Laisse un avis sur BalanceTonDate")
                             .setDescription("```Pour laisser un avis sur Sweety il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
