@@ -4,7 +4,9 @@ const randomDice = () => Math.floor(Math.random() * 7 ) + 1;
 const { PREFIX } = require("../config");
 
 class Casino {
-    constructor(message, client) {
+    constructor(message, reaction, user, client) {
+        this.reaction = reaction;
+        this.user = user; 
         this.client = client;
         this.message = message;
         this.args = message.content.slice().split(/ /).filter(element => element !== '');
@@ -51,6 +53,26 @@ class Casino {
                                 max: 1,
                                 errors: ["max"]
                             })
+                                newMsg.awaitReactions(filter, { 
+                                    max: 1, 
+                                    time: 60000, 
+                                    errors: ['time'] 
+                                }).then(async (collected) => {
+                                    this.message.channel.send(
+                                        new MessageEmbed()
+                                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                            .setColor("#f16179")
+                                            .attachFiles(jackpotImg)
+                                            .setThumbnail('attachment://jackpot.jpg')
+                                            .addFields(
+                                                { name: '#', value: randomDice(), inline: true },
+                                                { name: '#', value: randomDice(), inline: true },
+                                                { name: '#', value: randomDice(), inline: true }
+                                            )
+                                            .setFooter("Tape !casino ou !c pour jouer.")
+                                    )
+                            })
+
                     })     
 
                 }

@@ -45,6 +45,12 @@ client.on('message', message => {
 
 })
 
+client.on("messageReactionRemove", async (reaction, user)=>{
+    new Casino( reaction, user, client).selector()
+})
+
+
+
 const channelId = '862785768870641704'
 
 client.on('guildMemberAdd', (member) => {
