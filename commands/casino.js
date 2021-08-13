@@ -4,9 +4,7 @@ const randomDice = () => Math.floor(Math.random() * 7 ) + 1;
 const { PREFIX } = require("../config");
 
 class Casino {
-    constructor(message, reaction, user, client) {
-        this.reaction = reaction;
-        this.user = user; 
+    constructor(message, client) {
         this.client = client;
         this.message = message;
         this.args = message.content.slice().split(/ /).filter(element => element !== '');
