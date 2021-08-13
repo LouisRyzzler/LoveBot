@@ -42,8 +42,7 @@ class Casino {
                             )
                             .setFooter("Tape !casino ou !c pour jouer.")
                     ).then(async (message) => {
-                        await message.react('➕').then().catch(console.error);
-                        console.log("ALO JE SUIS LA")
+                        await message.react('➕').then().catch(console.error)
       
                         const filter = (reaction, user) => reaction.emoji.name === "➕" &&
                             user.id === this.message.author.id
@@ -54,6 +53,7 @@ class Casino {
                                 max: 1,
                                 errors: ["max"]
                             })
+                            console.log("ALO JE SUIS LA ")
                             
                             
 
