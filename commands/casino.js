@@ -30,7 +30,7 @@ class Casino {
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "casino") {
                     function sendCasino(chanel) {
-                        this.channel.send(
+                        this.message.create.channel.send(
                         new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
                             .setColor("#f16179")
