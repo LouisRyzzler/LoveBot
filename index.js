@@ -60,4 +60,4 @@ client.on('guildMemberAdd', (member) => {
     channel.send(embed)
 })
 
-client.login('ODYxNTQ5NTY5Mjk2MDM5OTM3.YOLakA.bzZkLRP-caVfB3-ZzxupI_RoFvA');
+client.login(process.env.TOKEN);

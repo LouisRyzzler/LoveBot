@@ -59,9 +59,8 @@ class Roulette {
                                                         .setThumbnail('attachment://bleu.png')
                                                         .setDescription("Tu as perdu")
                                                         .setFooter("Tape !roulette pour jouer.")
-                                                );
-                                            };
-                                            if(randomDice() === 2) {
+                                                )
+                                            } else {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -70,9 +69,14 @@ class Roulette {
                                                         .setThumbnail('attachment://rouge.png')
                                                         .setDescription("Tu as gagné")
                                                         .setFooter("Tape !roulette pour jouer.")
-                                                );
-                                            };
-                                            
+                                                )
+                                                this.message.author.send(
+                                                    new MessageEmbed()
+                                                        .setColor("#f16179")
+                                                        .setTitle("Surprise Surprise")
+                                                        .setDescription("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                                                )
+                                            }
                                             break
                                         case "🔵":
                                             if(randomDice() === 1) {
@@ -84,9 +88,14 @@ class Roulette {
                                                         .setThumbnail('attachment://bleu.png')
                                                         .setDescription("Tu as gagné")
                                                         .setFooter("Tape !roulette pour jouer.")
-                                                );
-                                            };
-                                            if(randomDice() === 2) {
+                                                )
+                                                this.message.author.send(
+                                                    new MessageEmbed()
+                                                        .setColor("#f16179")
+                                                        .setTitle("Surprise Surprise")
+                                                        .setDescription("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                                                )
+                                            } else {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -95,8 +104,8 @@ class Roulette {
                                                         .setThumbnail('attachment://rouge.png')
                                                         .setDescription("Tu as perdu")
                                                         .setFooter("Tape !roulette pour jouer.")
-                                                );
-                                            };
+                                                )
+                                            }
                                             break
                                     }
                                 })
