@@ -47,10 +47,10 @@ class Casino {
                         const filter = (reaction, user) => reaction.emoji.name === "➕" &&
                             user.id === this.message.author.id;
 
-                            await message.awaitReactions(filter, {
+                            console.log(await message.awaitReactions(filter, {
                                 max: 1,
                                 errors: ["max"]
-                            })
+                            }))
                             
                             
 
