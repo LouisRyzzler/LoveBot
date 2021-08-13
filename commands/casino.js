@@ -53,25 +53,8 @@ class Casino {
                                 max: 1,
                                 errors: ["max"]
                             })
-                                newMsg.awaitReactions(filter, { 
-                                    max: 1, 
-                                    time: 60000, 
-                                    errors: ['time'] 
-                                }).then(async (collected) => {
-                                    this.message.channel.send(
-                                        new MessageEmbed()
-                                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                            .setColor("#f16179")
-                                            .attachFiles(jackpotImg)
-                                            .setThumbnail('attachment://jackpot.jpg')
-                                            .addFields(
-                                                { name: '#', value: randomDice(), inline: true },
-                                                { name: '#', value: randomDice(), inline: true },
-                                                { name: '#', value: randomDice(), inline: true }
-                                            )
-                                            .setFooter("Tape !casino ou !c pour jouer.")
-                                    )
-                            })
+                            
+                            
 
                     })     
 
