@@ -45,9 +45,7 @@ client.on('message', message => {
 
 })
 
-client.on("messageReactionRemove", async (reaction, user)=>{
-    new Casino( reaction, user, client).selector()
-})
+
 
 
 
