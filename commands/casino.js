@@ -29,7 +29,7 @@ class Casino {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "casino") {
-                    function casino() {
+                    function casino(chanel) {
                         channel.send(
                         new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
