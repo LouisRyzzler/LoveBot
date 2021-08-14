@@ -29,8 +29,7 @@ class Casino {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "casino") {
-                    function sendCasino(chanel) {
-                        chanel.send( 
+                        channel.send( 
                             new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
                             .setColor("#f16179")
@@ -54,8 +53,6 @@ class Casino {
                             })                        
                             
                     })     
-                    }
-                    sendCasino(this.message.channel);
                     }
             }    
         }
