@@ -49,7 +49,7 @@ client.on('message', message => {
 
 
 
-const channelId = '862785768870641704'
+const channelId = '834362034392924211'
 
 client.on('guildMemberAdd', (member) => {
     console.log(member)
