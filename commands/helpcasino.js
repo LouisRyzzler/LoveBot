@@ -58,6 +58,7 @@ class Helpcasino {
                             { name: "La roulette", value: "Pour jouer à la roulette, allez dans le channel <#876529471417638942> et tapez la commande `!roulette`.", inline: true},
                             { name: "Comment gagner ?", value: "Pour gagner à la roulette, il vous suffit de miser sur une couleur et de tomber dessus.\n\n Récompense reste à déterminer.", inline: false, inline: true}
                         )
+                        .setFooter("Tape !helpcasino pour revoir ce message.")
                 )
             }
     }
