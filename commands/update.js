@@ -23,7 +23,7 @@ class Update {
 
     Update() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "862785070946189322") { 
+            if(this.message.channel.id === "876528306495815722") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "update") {
@@ -31,7 +31,7 @@ class Update {
                         new MessageEmbed()
                             .setTitle("1.0.8")
                             .setColor("#f16179")
-                            .setDescription("<:update:863386248734179338> <:pointer:863335546751287306> __Update :__ \n\nSorti de la commande `!roulette` pouvant être utiliser dans le salon <#868776883284758619>. \n Un jeu où il vous suffit de miser sur une couleur (rouge ou bleu) pour gagner. \n\n La récompense pour le vainqueurs reste indéterminé, nous attendons vous <#862785451299700756>.")
+                            .setDescription("<:update:863386248734179338> <:pointer:876532736435826729> __Update :__ \n\n réagencement de tout le serveur laissant place à un Sweety2 + ajustement du bot en fonction de la détection de salons.")
                     ).then(async (message) => {
                         await message.react('<:update:863386248734179338>').then().catch(console.error);
 

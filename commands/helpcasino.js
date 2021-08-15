@@ -35,7 +35,7 @@ class Helpcasino {
                         .attachFiles(jackpot1)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(
-                            { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#868776883284758619> et tapez la commande `!casino` ou `!c`.", inline: true },
+                            { name: "Casino", value: "Pour jouer au casino, allez dans le channel <#876529471417638942> et tapez la commande `!casino` ou `!c`.", inline: true },
                             { name: "Comment ganger ?", value: "Pour ganger au jeu du casino, il vous suffit d'obtenir la suite de numéros `7 7 7`.\n\n En récompense un rôle personnalisé vous sera attribué, toutes demandes est à faire auprès d'un administateur.", inline: true}
                         )
                 )
@@ -45,7 +45,7 @@ class Helpcasino {
                         .attachFiles(dice1)
                         .setThumbnail('attachment://dice.png')
                         .addFields(
-                            { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#868776883284758619> et tapez la commande `!dice`.", inline: true},
+                            { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#876529471417638942> et tapez la commande `!dice`.", inline: true},
                             { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `1`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
                         )
                 )
@@ -55,7 +55,7 @@ class Helpcasino {
                         .attachFiles(roulette)
                         .setThumbnail('attachment://roulette.png')
                         .addFields(
-                            { name: "La roulette", value: "Pour jouer à la roulette, allez dans le channel <#868776883284758619> et tapez la commande `!roulette`.", inline: true},
+                            { name: "La roulette", value: "Pour jouer à la roulette, allez dans le channel <#876529471417638942> et tapez la commande `!roulette`.", inline: true},
                             { name: "Comment gagner ?", value: "Pour gagner à la roulette, il vous suffit de miser sur une couleur et de tomber dessus.\n\n Récompense reste à déterminer.", inline: false, inline: true}
                         )
                 )

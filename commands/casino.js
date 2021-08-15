@@ -25,7 +25,7 @@ class Casino {
 
     Casino() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "868776883284758619") { 
+            if(this.message.channel.id === "876529471417638942") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "casino") {

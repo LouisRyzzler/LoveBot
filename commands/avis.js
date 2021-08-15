@@ -26,7 +26,7 @@ class Avis {
 
     Avis() {
         if(this.message.author.id !== this.client.user.id) {
-            if(this.message.channel.id === "862784628980187157") { 
+            if(this.message.channel.id === "863760718086930432") { 
 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "avis") {
