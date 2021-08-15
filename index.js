@@ -1,5 +1,10 @@
 const { Client, MessageEmbed } = require('discord.js');
 
+const { promisify } = require('util');
+const wait = promisify(setTimeout);
+let invites;
+const id = '834348938584522782'
+
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
 const { Info_Rencontre } = require('./commands/info_rencontre.js');
@@ -23,6 +28,12 @@ const { NSFW } = require('./commands/nsfw.js')
 
 client.on('ready', () => {
     console.log(`${client.user.tag} est connecté !`);
+
+    await wait(2000);
+
+    client.guild.cache.get(id).fetchInvites().fetchInvites(inv => {
+        invites = inv;
+    })
 });
 
 client.on('message', message => {
@@ -53,7 +64,7 @@ client.on('message', message => {
 
 const channelId = '834362034392924211'
 
-client.on('guildMemberAdd', (member) => {
+client.on('guildMemberAdd', async(member) => {
     console.log(member)
     
     const embed =  new MessageEmbed()
@@ -63,7 +74,21 @@ client.on('guildMemberAdd', (member) => {
         .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed)
+    channel.send(embed);
+
+
+
+
+
+    if(member.guild.id !== id) return;
+
+    member.guild.fetchInvites().then(gInvites => {
+        const invite = gInvites.find((inv) => invites.get(inv.code).uses < inv.uses);
+
+        const channel = member.guild.channels.cache.get('836216581264244756');
+
+        channel.send(`${member} a été invité par ${invite.inviter} et son code est ${invite.code}`);
+    })
 })
 
 client.login(process.env.TOKEN);
