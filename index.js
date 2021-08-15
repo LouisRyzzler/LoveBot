@@ -100,8 +100,8 @@ client.on('guildMemberAdd', async(member, message ) => {
         .addField('Invitations', i)
         .setTimestamp()
 
-    const channel = member.guild.channels.cache.get(channelInv)
-    channel.send(embed1);
+    const channel1 = member.guild.channels.cache.get(channelInv)
+    channel1.send(embed1);
 })
 
 client.login(process.env.TOKEN);
