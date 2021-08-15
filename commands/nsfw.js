@@ -29,10 +29,15 @@ class NSFW {
                         new MessageEmbed()
                             .setColor("#f16179")
                             .setTitle("Catégorie NSFW") 
-                            .setDescription("En cochant la réaction ci-dessous, tu pourras accéder à la catégorier NSFW et, tu certifies être âgé de plus de 18ans .")
-                            .attachFiles(sweetypp)
-                            .setImage('attachment://Gif pp.gif')
+                            .setDescription("En cochant la réaction ci-dessous, tu pourras accéder à la catégorie NSFW et, tu certifies être âgé de plus de 18ans.")
 
+                    )
+                    this.message.channel.send(
+                        new MessageEmbed()
+                        .setColor("#f16179")
+                        .attachFiles(sweetypp)
+                        .setImage('attachment://Gif pp.gif')
+                        .setFooter("Coche la réaction pour acceder à la catégorie NSFW.")
                     )
                 }
             }    
