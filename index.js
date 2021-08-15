@@ -24,6 +24,7 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
+const { Invites } = require('./commands/invites.js')
 
 
 client.on('ready', async() => {
@@ -55,6 +56,7 @@ client.on('message', message => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
+    new Invites( message, client).selector()
 
 })
 
@@ -86,8 +88,20 @@ client.on('guildMemberAdd', async(member) => {
         const invite1 = gInvites.find((inv) => invites.get(inv.code).uses < inv.uses);
 
         const channel1 = member.guild.channels.cache.get('836216581264244756');
+        const inviteCounter= {}
 
-        channel1.send(`${member} a été invité par ${invite1.inviter} il a maintenant ${inviter.memberCount}`);
+        invites.forEach((invite) => {
+            const { uses, inviter } = invite
+            const [ username, discriminator ] = inviter
+
+            const name = `${username}#${discriminator}`
+
+            inviteCounter[name] = (inviteCounter[name] || 0 + uses)
+        })
+
+        const count = inviteCounter[invite]
+
+        channel1.send(`${member} a été invité par ${invite1.inviter}, il a invité ${count} member`);
     })
 })
 
