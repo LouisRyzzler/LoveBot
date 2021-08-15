@@ -94,14 +94,14 @@ client.on('guildMemberAdd', async(member, message ) => {
     let i = 0;
     userInv.forEach(inv => i += inv.uses)
 
-    const embed = new MessageEmbed()
+    const embed1 = new MessageEmbed()
         .setColor("#f16179")
         .setTitle(`${user.username} Invites`)
         .addField('Invitations', i)
         .setTimestamp()
 
     const channel = member.guild.channels.cache.get(channelInv)
-    channel.send(embed);
+    channel.send(embed1);
 })
 
 client.login(process.env.TOKEN);
