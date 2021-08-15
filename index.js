@@ -18,6 +18,7 @@ const { Boost } = require('./commands/boost.js')
 const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
+const { NSFW } = require('./commands/nsfw.js')
 
 
 client.on('ready', () => {
@@ -42,6 +43,7 @@ client.on('message', message => {
     new Helpcasino( message, client).selector()
     new C( message, client).selector()
     new Roulette( message, client).selector()
+    new NSFW( message, client).selector()
 
 })
 
