@@ -38,7 +38,7 @@ class Help {
                             { name: "Commandes Rôles", value: "<:pointer:876532736435826729> `!gold` \n<:pointer:876532736435826729> `!boost`"},
                             { name: "Liens utiles", value: "<:pointer:876532736435826729> Invitation du serveur: https://discord.gg/u8juXJapRQ\n <:pointer:876532736435826729>", inline: false }
                         )
-                        .setFooter(this.message.author.username, this.message.author.avatarURL())
+                        .setFooter("Tape !help pour revoir ce message.")
                 )
             }
     }
