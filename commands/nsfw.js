@@ -34,10 +34,10 @@ class NSFW {
                     )
                     this.message.channel.send(
                         new MessageEmbed()
-                        .setColor("#f16179")
-                        .attachFiles(sweetypp)
-                        .setImage('attachment://Gif pp.gif')
-                        .setFooter("Coche la réaction pour acceder à la catégorie NSFW.")
+                            .setColor("#f16179")
+                            .attachFiles(sweetypp)
+                            .setImage('attachment://Gif pp.gif')
+                            .setFooter("Coche la réaction pour acceder à la catégorie NSFW.")
                     )
                 }
             }    
