@@ -1,5 +1,6 @@
-const { MessageEmbed, MessageAttachment } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { PREFIX } = require("../config");
+const channelInv = '836216581264244756'
 
 class Invites {
     constructor(message, client) {
@@ -24,13 +25,26 @@ class Invites {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "invites") {
-                    this.message.channel.send(
-                        new MessageEmbed()
-                            .setTitle("Informations Pings")
-                            .setColor("#f16179")
-                            .setDescription("")
-                            .setFooter("")
-                    )
+
+                    let user = message.mention.users.first() || message.author 
+                    let invites = await message.guild.fetchInvites();
+                    let userInv = invites.filter(u => u.inviter && u.inviter.id === user.id)
+                
+                    if(userInv.size <= 0) {
+                        return message.channel.send(`${user.username} n'a pas d'invitations`)
+                    }
+                
+                    let i = 0;
+                    userInv.forEach(inv => i += inv.uses)
+                
+                    const embed1 = new MessageEmbed()
+                        .setColor("#f16179")
+                        .setTitle(`${user.username} Invites`)
+                        .addField('Invitations', i)
+                        .setTimestamp()
+                
+                    const channel1 = member.guild.channels.cache.get(channelInv)
+                    channel1.send(embed1);
                 }
         }
     }

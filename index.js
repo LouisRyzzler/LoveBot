@@ -65,7 +65,6 @@ client.on('message', message => {
 
 
 const channelId = '834362034392924211'
-const channelInv = '836216581264244756'
 
 client.on('guildMemberAdd', async(member, message ) => {
     console.log(member)
