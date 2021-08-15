@@ -83,11 +83,11 @@ client.on('guildMemberAdd', async(member) => {
     if(member.guild.id !== id) return;
 
     member.guild.fetchInvites().then(gInvites => {
-        const invite = gInvites.find((inv) => invites.get(inv.code).uses < inv.uses);
+        const invite1 = gInvites.find((inv) => invites.get(inv.code).uses < inv.uses);
 
-        const channel = member.guild.channels.cache.get('836216581264244756');
+        const channel1 = member.guild.channels.cache.get('836216581264244756');
 
-        channel.send(`${member} a été invité par ${invite.inviter} et son code est ${invite.code}`);
+        channel1.send(`${member} a été invité par ${invite1.inviter} et son code est ${invite1.code}`);
     })
 })
 
