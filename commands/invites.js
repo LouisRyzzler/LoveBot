@@ -26,7 +26,7 @@ class Invites {
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "invites") {
 
-                    let user = message.mention.users.first() || message.author 
+                    let user = this.message.mention.users.first() || message.author 
                     let invites = async (message) => {
                         await message.guild.fetchInvites();
                     }
