@@ -52,6 +52,6 @@ class Invites {
     }
 }
 
-module.exports = async(Client, message, args) =>{
+module.exports ={
     Invites 
 }
