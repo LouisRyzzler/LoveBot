@@ -26,7 +26,7 @@ const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
 
 
-client.on('ready', () => {
+client.on('ready', async() => {
     console.log(`${client.user.tag} est connecté !`);
 
     await wait(2000);
