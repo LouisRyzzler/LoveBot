@@ -1,10 +1,5 @@
 const { Client, MessageEmbed } = require('discord.js');
 
-const { promisify } = require('util');
-const wait = promisify(setTimeout);
-let invites;
-const id = '834348938584522782'
-
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
 const { Info_Rencontre } = require('./commands/info_rencontre.js');
@@ -24,17 +19,11 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
-const { Invites } = require('./commands/invites.js')
 
 
 client.on('ready', async() => {
     console.log(`${client.user.tag} est connecté !`);
-
-    await wait(2000);
-
-    client.guilds.cache.get(id).fetchInvites().then(inv => {
-        invites = inv;
-    })
+    
 });
 
 client.on('message', message => {
@@ -56,7 +45,6 @@ client.on('message', message => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
-    new Invites( message, client).selector()
 
 })
 
@@ -77,30 +65,6 @@ client.on('guildMemberAdd', async(member, message ) => {
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed);
-
-
-
-
-    console.log(member)
-    let user = message.mention.users.first() || message.author 
-    let invites = await message.guild.fetchInvites();
-    let userInv = invites.filter(u => u.inviter && u.inviter.id === user.id)
-
-    if(userInv.size <= 0) {
-        return message.channel.send(`${user.username} n'a pas d'invitations`)
-    }
-
-    let i = 0;
-    userInv.forEach(inv => i += inv.uses)
-
-    const embed1 = new MessageEmbed()
-        .setColor("#f16179")
-        .setTitle(`${user.username} Invites`)
-        .addField('Invitations', i)
-        .setTimestamp()
-
-    const channel1 = member.guild.channels.cache.get(channelInv)
-    channel1.send(embed1);
 })
 
 client.login(process.env.TOKEN);
