@@ -27,7 +27,9 @@ class Invites {
                 if(this.args[0] === PREFIX + "invites") {
 
                     let user = message.mention.users.first() || message.author 
-                    let invites = await message.guild.fetchInvites();
+                    let invites = async (message) => {
+                        await message.guild.fetchInvites();
+                    }
                     let userInv = invites.filter(u => u.inviter && u.inviter.id === user.id)
                 
                     if(userInv.size <= 0) {
@@ -50,6 +52,6 @@ class Invites {
     }
 }
 
-module.exports ={
+module.exports = async(Client, message, args) =>{
     Invites 
 }
