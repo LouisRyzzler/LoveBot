@@ -31,7 +31,7 @@ client.on('ready', async() => {
 
     await wait(2000);
 
-    client.guild.cache.get(id).fetchInvites().fetchInvites(inv => {
+    client.guilds.cache.get(id).fetchInvites().then(inv => {
         invites = inv;
     })
 });
@@ -70,7 +70,7 @@ client.on('guildMemberAdd', async(member) => {
     const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
-        .setFooter(`Bienvenue sur Sweety ${member} !`)
+        .setFooter(`Bienvenue sur Sweety !`)
         .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
