@@ -65,8 +65,9 @@ client.on('message', message => {
 
 
 const channelId = '834362034392924211'
+const channelInv = '836216581264244756'
 
-client.on('guildMemberAdd', async(member) => {
+client.on('guildMemberAdd', async(member, message ) => {
     console.log(member)
     
     const embed =  new MessageEmbed()
@@ -81,16 +82,26 @@ client.on('guildMemberAdd', async(member) => {
 
 
 
+    console.log(member)
+    let user = message.mention.users.first() || message.author 
+    let invites = await message.guild.fetchInvites();
+    let userInv = invites.filter(u => u.inviter && u.inviter.id === user.id)
 
-    if(member.guild.id !== id) return;
+    if(userInv.size <= 0) {
+        return message.channel.send(`${user.username} n'a pas d'invitations`)
+    }
 
-    member.guild.fetchInvites().then(gInvites => {
-        const invite1 = gInvites.find((inv) => invites.get(inv.code).uses < inv.uses);
+    let i = 0;
+    userInv.forEach(inv => i += inv.uses)
 
-        const channel1 = member.guild.channels.cache.get('836216581264244756');
+    const embed = new MessageEmbed()
+        .setColor("#f16179")
+        .setTitle(`${user.username} Invites`)
+        .addField('Invitations', i)
+        .setTimestamp()
 
-        channel1.send(`${member} a été invité par ${invite1.inviter}, il a invité ${inviteCounter}`);
-    })
+    const channel = member.guild.channels.cache.get(channelInv)
+    channel.send(embed);
 })
 
 client.login(process.env.TOKEN);
