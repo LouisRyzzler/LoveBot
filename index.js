@@ -87,7 +87,7 @@ client.on('guildMemberAdd', async(member) => {
 
         const channel1 = member.guild.channels.cache.get('836216581264244756');
 
-        channel1.send(`${member} a été invité par ${invite1.inviter} il a maintenant ${invite1.memberCount}`);
+        channel1.send(`${member} a été invité par ${invite1.inviter} il a maintenant ${inviter.memberCount}`);
     })
 })
 
