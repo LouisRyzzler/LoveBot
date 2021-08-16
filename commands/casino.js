@@ -29,7 +29,6 @@ class Casino {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "casino") {
-                    
                     this.message.channel.send( 
                         new MessageEmbed()
                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
@@ -42,34 +41,7 @@ class Casino {
                             { name: '#', value: randomDice(), inline: true }
                         )
                         .setFooter("Tape !casino ou !c pour jouer.")
-                    ).then(async (message) => {
-                        await message.react('➕').then().catch(console.error)
-    
-                        const filter = (reaction, user) => reaction.emoji.name === "➕" &&
-                        user.id === this.message.author.id
-                
-                        await message.awaitReactions(filter, {
-                            max: 1,
-                            errors: ["max"]
-                        }).then(async collected => {
-                            switch (collected.first().emoji.name) {
-                                case "➕":
-                                    this.message.channel.send( 
-                                        new MessageEmbed()
-                                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                        .setColor("#f16179")
-                                        .attachFiles(jackpotImg)
-                                        .setThumbnail('attachment://jackpot.jpg')
-                                        .addFields(
-                                            { name: '#', value: randomDice(), inline: true },
-                                            { name: '#', value: randomDice(), inline: true },
-                                            { name: '#', value: randomDice(), inline: true }
-                                        )
-                                        .setFooter("Tape !casino ou !c pour jouer.")
-                                    )
-                            }
-                        })               
-                    })     
+                    )
                 }
             }    
         }
