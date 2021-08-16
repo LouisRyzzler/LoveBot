@@ -1,4 +1,5 @@
-const { Client, MessageEmbed } = require('discord.js');
+const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
+const gif = new MessageAttachment('./assets/img/gif.gif');
 
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
@@ -60,8 +61,10 @@ client.on('guildMemberAdd', async( member ) => {
     const embed =  new MessageEmbed()
         .setColor("#f16179")
         .setTitle("Bienvenue sur Sweety `🍒`")
-        .setDescription("<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Présente toi dans <#876528588067835914\n <a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Fait des rencontres dans <#876529883000504420>\n <a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
+        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Présente toi dans <#876528588067835914>\n <a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Fait des rencontres dans <#876529883000504420>\n <a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
         .setFooter(`✨ Profite bien parmis nous !`)
+        .setThumbnail('attachment://gif.gif')
+        .attachFiles(gif)
         .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
