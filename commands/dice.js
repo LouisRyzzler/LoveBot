@@ -37,7 +37,7 @@ class Dice {
                             .attachFiles(diceImg)
                             .setThumbnail('attachment://dice.png')
                             .addFields(
-                                { name: '#', value1: randomDice(), inline: true }
+                                { name: '#', value: randomDice(), inline: true }
                             )
                             .setFooter("Tape !dice pour jouer.")
                     )
