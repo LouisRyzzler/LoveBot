@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const coeurImg = new MessageAttachment('./assets/img/logo2.gif');
+const gif = new MessageAttachment('./assets/img/gif.gif');
 const { PREFIX } = require("../config");
 
 class Info_Rencontre {
@@ -30,8 +30,8 @@ class Info_Rencontre {
                             .setColor("#f16179")
                             .setTitle("Comment ajouter votre profil ?")
                             .setDescription("Tapez **!rencontre** pour poster ton profil. \n\nJe vous enverrai des instructions en message privé, suivez les attentivement.")
-                            .attachFiles(coeurImg)
-                            .setThumbnail('attachment://logo2.gif')
+                            .attachFiles(gif)
+                            .setThumbnail('attachment://gif.gif')
 
                     )
                 }
