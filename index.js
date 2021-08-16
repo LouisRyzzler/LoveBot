@@ -60,11 +60,7 @@ client.on('guildMemberAdd', async( member ) => {
     const embed =  new MessageEmbed()
         .setColor("#f16179")
         .setTitle("Bienvenue sur Sweety `🍒`")
-        .addFields(
-            { name: "<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809>", value: "Présente toi dans <#876528588067835914>", inline: false},
-            { name: "<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809>", value: "Fait des rencontres dans <#876529883000504420>", inline: false },
-            { name: "<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809>", value: "Amuse toi bien !", inline: false }
-        )
+        .setDescription("<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Présente toi dans <#876528588067835914\n <a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Fait des rencontres dans <#876529883000504420>\n <a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
         .setFooter(`✨ Profite bien parmis nous !`)
         .setTimestamp();
 
