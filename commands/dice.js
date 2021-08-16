@@ -49,7 +49,7 @@ class Dice {
                             .attachFiles(nitro)
                             .setThumbnail('attachment://nitro.png')
                             .addFields(
-                                { name: 'Tu as gagné', value: "Félicitation ! Tu viens de remporter un Nitro Classic. \nFait ta demande auprès de <@396425830604996610>.", inline: true }
+                                { name: 'Tu as gagné', value: "**Félicitation** ! Tu viens de remporter un **Nitro Classic**. \nFait ta demande auprès de <@396425830604996610>.", inline: true }
                             )
                             .setFooter("Tape !dice pour jouer.")
                         )
