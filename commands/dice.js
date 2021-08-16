@@ -41,7 +41,7 @@ class Dice {
                             )
                             .setFooter("Tape !dice pour jouer.")
                     );
-                    if( 1 = `${value}` ) {
+                    if( `${value}` = 1 ) {
                         this.message.channel.send(
                             new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
