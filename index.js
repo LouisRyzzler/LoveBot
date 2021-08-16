@@ -56,6 +56,7 @@ client.on('guildMemberAdd', async( member ) => {
     const embed =  new MessageEmbed()
         .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
+        .setDescription(`Mon tag: ${member}`)
         .setFooter(`Bienvenue sur Sweety !`)
         .setTimestamp();
 
