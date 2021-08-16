@@ -1,7 +1,7 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const diceImg = new MessageAttachment('./assets/img/dice.png');
 const nitro = new MessageAttachment('./assets/img/nitro.png');
-const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
+const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
 const { PREFIX } = require("../config");
 
 class Dice {
@@ -51,7 +51,7 @@ class Dice {
                             .addFields(
                                 { name: 'TU AS GAGNE !', value: "⌒⌒⌒⌒⌒⌒⌒ \n\n**Félicitation** ! Tu viens de remporter un **Nitro Classic**. \nFait ta demande auprès de <@396425830604996610>.", inline: true }
                             )
-                            .setFooter("Tape !dice pour jouer.")
+                            .setFooter("Tape !dice pour rejouer.")
                         )
                     }
                 }
