@@ -37,11 +37,11 @@ class Dice {
                             .attachFiles(diceImg)
                             .setThumbnail('attachment://dice.png')
                             .addFields(
-                                { name: '#', value: randomDice(), inline: true }
+                                { name: '#', value1: randomDice(), inline: true }
                             )
                             .setFooter("Tape !dice pour jouer.")
                     );
-                    if( `${value}` = 1 ) {
+                    if( `${value1}` = 1 ) {
                         this.message.channel.send(
                             new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
