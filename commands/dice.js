@@ -40,7 +40,7 @@ class Dice {
                                 { name: '#', value: randomDice(), inline: true }
                             )
                             .setFooter("Tape !dice pour jouer.")
-                    )
+                    );
                     if( randomDice() === 1 ) {
                         this.message.channel.send(
                             new MessageEmbed()
