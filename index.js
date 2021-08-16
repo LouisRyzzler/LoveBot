@@ -1,4 +1,4 @@
-const { Client, MessageEmbed } = require('discord.js');
+const { Client } = require('discord.js');
 
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
@@ -19,6 +19,8 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
+const { Member } = require('./commands/member.js')
+
 
 
 client.on('ready', async() => {
@@ -48,23 +50,9 @@ client.on('message', message => {
 
 })
 
-
-
-
-
-const channelId = '834362034392924211'
-
-client.on('guildMemberAdd', async(member, message ) => {
-    console.log(member)
+client.on('guildMemberAdd', async( member ) => {
+    new Member( member, client).selector()
     
-    const embed =  new MessageEmbed()
-        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
-        .setColor("#f16179")
-        .setFooter(`Bienvenue sur Sweety !`)
-        .setTimestamp();
-
-    const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed);
 })
 
 client.login(process.env.TOKEN);
