@@ -50,18 +50,25 @@ client.on('message', message => {
 })
 
 const channelId = '834362034392924211'
+const channelId2 = '834362034392924211'
 
 client.on('guildMemberAdd', async( member ) => {
 
+    const channel2 = member.guild.channels.cache.get(channelId2)
+    channel2.send(`Bienvenue ${member}`)
+
     const embed =  new MessageEmbed()
-        .setAuthor(`${member.displayName}`, member.user.displayAvatarURL())
         .setColor("#f16179")
-        .setDescription(`Mon tag: ${member}`)
-        .setFooter(`Bienvenue sur Sweety !`)
+        .setTitle("Bienvenue sur Sweety `🍒`")
+        .setDescription("<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Présente toi dans <#876528588067835914>")
+        .setDescription("<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Fait des rencontres dans <#876529883000504420>")
+        .setDescription("<a:4231grayarrowright:876765215184805938> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
+        .setFooter(`✨ Profite bien parmis nous !`)
         .setTimestamp();
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed);
 })
+
 
 client.login(process.env.TOKEN);
