@@ -23,7 +23,7 @@ class Update {
 
     Update() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "876528306495815722") { 
+            if(this.message.channel.id === "881598134906683429") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "update") {

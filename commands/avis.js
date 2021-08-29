@@ -26,7 +26,7 @@ class Avis {
 
     Avis() {
         if(this.message.author.id !== this.client.user.id) {
-            if(this.message.channel.id === "863760718086930432") { 
+            if(this.message.channel.id === "881598135233830963") { 
 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "avis") {
@@ -34,7 +34,7 @@ class Avis {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setTitle("Laisse un avis sur Sweety")
+                            .setTitle("Laisse un avis sur Rencontres FR")
                             .setDescription("```Pour laisser un avis il te suffit d'écrire un message ici même, je me chargerai pour toi de poster ton avis.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;

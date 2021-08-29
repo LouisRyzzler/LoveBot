@@ -25,7 +25,7 @@ class C {
 
     C() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "876529471417638942") { 
+            if(this.message.channel.id === "881598135510642780") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "c") {

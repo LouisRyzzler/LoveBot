@@ -22,7 +22,7 @@ class Informations {
 
     Informations() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "834363364204871691") { 
+            if(this.message.channel.id === "881598134906683431") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "informations") {

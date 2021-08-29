@@ -25,7 +25,7 @@ class Reglement {
 
     Reglement() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "876528259557363742") { 
+            if(this.message.channel.id === "881598134906683427") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "reglement") {

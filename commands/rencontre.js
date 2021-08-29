@@ -25,7 +25,7 @@ class Rencontre {
 
     rencontre() {
         if(this.message.author.id !== this.client.user.id) {
-            if(this.message.channel.id === "876528588067835914") {
+            if(this.message.channel.id === "881598134906683424") {
 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "rencontre") {
@@ -109,9 +109,9 @@ class Rencontre {
                                                 switch (collected.first().emoji.name) {
                                                     case "✅":
                                                         this.message.member.roles.add("834476736539656202").then().catch(console.error)
-                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "834348938584522782") ? this.client.guilds.cache.get("834348938584522782") : null;
+                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "881598134441099345") ? this.client.guilds.cache.get("881598134441099345") : null;
                                                         if(guild !== null) {
-                                                            let channel = guild.channels.cache.some(fn => fn.id === "876529883000504420") ? guild.channels.cache.get("876529883000504420") : null;
+                                                            let channel = guild.channels.cache.some(fn => fn.id === "881598134906683425") ? guild.channels.cache.get("881598134906683425") : null;
                                                             if(channel !== null) {
                                                                 channel.send(
                                                                     new MessageEmbed()
@@ -177,9 +177,9 @@ class Rencontre {
                                                 switch (collected2.first().emoji.name) {
                                                     case "✅":
                                                         this.message.member.roles.add("834476736539656202").then().catch(console.error)
-                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "834348938584522782") ? this.client.guilds.cache.get("834348938584522782") : null;
+                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "881598134441099345") ? this.client.guilds.cache.get("881598134441099345") : null;
                                                         if(guild !== null) {
-                                                            let channel = guild.channels.cache.some(fn => fn.id === "876529883000504420") ? guild.channels.cache.get("876529883000504420") : null;
+                                                            let channel = guild.channels.cache.some(fn => fn.id === "881598134906683425") ? guild.channels.cache.get("881598134906683425") : null;
                                                             if(channel !== null) {
                                                                 channel.send(
                                                                     new MessageEmbed()
@@ -245,9 +245,9 @@ class Rencontre {
                                                 switch (collected3.first().emoji.name) {
                                                     case "✅":
                                                         this.message.member.roles.add("834476736539656202").then().catch(console.error)
-                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "834348938584522782") ? this.client.guilds.cache.get("834348938584522782") : null;
+                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "881598134441099345") ? this.client.guilds.cache.get("881598134441099345") : null;
                                                         if(guild !== null) {
-                                                            let channel = guild.channels.cache.some(fn => fn.id === "876529883000504420") ? guild.channels.cache.get("876529883000504420") : null;
+                                                            let channel = guild.channels.cache.some(fn => fn.id === "881598134906683425") ? guild.channels.cache.get("881598134906683425") : null;
                                                             if(channel !== null) {
                                                                 channel.send(
                                                                     new MessageEmbed()
@@ -313,9 +313,9 @@ class Rencontre {
                                                 switch (collected4.first().emoji.name) {
                                                     case "✅":
                                                         this.message.member.roles.add("834476736539656202").then().catch(console.error)
-                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "834348938584522782") ? this.client.guilds.cache.get("834348938584522782") : null;
+                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "881598134441099345") ? this.client.guilds.cache.get("881598134441099345") : null;
                                                         if(guild !== null) {
-                                                            let channel = guild.channels.cache.some(fn => fn.id === "876529883000504420") ? guild.channels.cache.get("876529883000504420") : null;
+                                                            let channel = guild.channels.cache.some(fn => fn.id === "881598134906683425") ? guild.channels.cache.get("881598134906683425") : null;
                                                             if(channel !== null) {
                                                                 channel.send(
                                                                     new MessageEmbed()
