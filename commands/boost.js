@@ -34,7 +34,7 @@ class Boost {
                         .setThumbnail('attachment://Boost1.gif')
                         .addFields(
                             {name:"Comment obtenir le rôle Boosteur", value:"Booster le serveur une seule fois suffit pour obtenir le rôle <@&881624954070790144>.", inline: false},
-                            {name:"Avantages", value:"```<:pointer:876532736435826729> Vous obtenez tous les avantages du rôle <@&876526738174255134>.\n<:pointer:876532736435826729> Vous aurez un rôle affiché séparément des autres \n<:pointer:876532736435826729> Vous pouvez participer aux giveaways sans respecter aucunes conditions.\n<:pointer:876532736435826729> Vous gagnez l'accès au channel <#834555074045804605>.```", inline: false}
+                            {name:"Avantages", value:"`<:pointer:876532736435826729> Vous obtenez tous les avantages du rôle <@&876526738174255134>.\n<:pointer:876532736435826729> Vous aurez un rôle affiché séparément des autres \n<:pointer:876532736435826729> Vous pouvez participer aux giveaways sans respecter aucunes conditions.\n<:pointer:876532736435826729> Vous gagnez l'accès au channel <#834555074045804605>.`", inline: false}
                         )
                         .setFooter("Tape !boost pour revoir ce message.")
                 )
