@@ -25,7 +25,7 @@ class Color2 {
 
     Color2() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "881598134906683431") { 
+            if(this.message.channel.id === "881598135233830962") { 
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "color2") {
