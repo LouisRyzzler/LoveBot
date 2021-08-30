@@ -3,6 +3,7 @@ const pecheImg = new MessageAttachment('./assets/img/84451.png');
 const ceriseImg = new MessageAttachment('./assets/img/7889.png');
 const melonImg = new MessageAttachment('./assets/img/5556.png');
 const raisinImg = new MessageAttachment('./assets/img/765560.png');
+const lettreImg = new MessageAttachment('./assets/img/lettre.png');
 const { PREFIX } = require("../config");
 
 class Rencontre {
@@ -46,7 +47,7 @@ class Rencontre {
                     this.message.author.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setDescription("**Après t'être décris envoie une photo de ton choix.**\n ```Il te suffit de joindre une image par discord pour finaliser ton profil.```")
+                            .setDescription("**Après t'être décris envoie une photo de ton choix.**\n ```joint une image par discord pour finaliser ton profil.```")
                     ).then(async (message) => {
                         const filter = message => message.author.id === this.message.author.id;
 
@@ -62,7 +63,7 @@ class Rencontre {
                                 .addFields(
                                     {
                                         name: "Quel type de rencontre recherchez-vous ?.",
-                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis.```",
+                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis. \n💌 on verra bien.```",
                                         inline: false
                                     }
                                 )
@@ -71,11 +72,14 @@ class Rencontre {
                             await message.react('🍒').then().catch(console.error);
                             await message.react('🍉').then().catch(console.error);
                             await message.react('🍇').then().catch(console.error);
+                            await message.react('💌').then().catch(console.error);
 
                             const filter = (reaction, user) => reaction.emoji.name ===  "🍑" ||
                                 reaction.emoji.name === "🍒" ||
                                 reaction.emoji.name === "🍉" ||
                                 reaction.emoji.name === "🍇" &&
+                                reaction.emoji.name === "💌" &&
+
                                 user.id === this.message.author.id;
 
                             await message.awaitReactions(filter, {
@@ -83,6 +87,17 @@ class Rencontre {
                                 errors: ["max"]
                             }).then(async collected => {
                                 switch (collected.first().emoji.name) {
+
+
+
+
+
+
+
+
+
+
+
                                     case "🍑":
                                         this.message.author.send(
                                             new MessageEmbed()
@@ -151,6 +166,17 @@ class Rencontre {
                                             });
                                         }).then().catch(console.error);
                                         break;
+
+
+
+
+
+
+
+
+
+
+
                                     case "🍒":
                                         this.message.author.send(
                                             new MessageEmbed()
@@ -219,6 +245,17 @@ class Rencontre {
                                             });
                                         }).then().catch(console.error);
                                         break; 
+
+
+
+
+
+
+
+
+
+
+
                                     case "🍉":
                                         this.message.author.send(
                                             new MessageEmbed()
@@ -287,6 +324,17 @@ class Rencontre {
                                             });
                                         }).then().catch(console.error);
                                         break;    
+
+
+
+
+
+
+
+
+
+
+
                                     case "🍇":
                                         this.message.author.send(
                                             new MessageEmbed()
@@ -351,6 +399,84 @@ class Rencontre {
                                                             `WARNING: Vous avez décidé d'annuler l'opération.`
                                                         ).then().catch(console.error);
                                                         break;   
+                                                };
+                                            });
+                                        }).then().catch(console.error);
+                                        break;
+                                    
+                                        
+
+
+
+
+
+
+
+
+                                    case "💌":
+                                        this.message.author.send(
+                                            new MessageEmbed()
+                                                .setColor("#f16179")
+                                                .addFields(
+                                                    {
+                                                        name: "Confirmer ou non la réaction du sondage.",
+                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
+                                                        inline: false
+                                                    }
+                                                )
+                                        ).then(async (message) => {
+                                            await message.react('✅').then().catch(console.error);
+                                            await message.react('❌').then().catch(console.error);
+
+                                            const filter = (reaction, user) => reaction.emoji.name === "✅" ||
+                                                reaction.emoji.name === "❌" &&
+                                                user.id === this.message.author.id;
+
+                                            await message.awaitReactions(filter, {
+                                                max: 1,
+                                                errors: ["max"]
+                                            }).then(async collected => {
+                                                switch (collected.first().emoji.name) {
+                                                    case "✅":
+                                                        this.message.member.roles.add("834476736539656202").then().catch(console.error)
+                                                        let guild = this.client.guilds.cache.some(fn => fn.id === "881598134441099345") ? this.client.guilds.cache.get("881598134441099345") : null;
+                                                        if(guild !== null) {
+                                                            let channel = guild.channels.cache.some(fn => fn.id === "881598134906683425") ? guild.channels.cache.get("881598134906683425") : null;
+                                                            if(channel !== null) {
+                                                                channel.send(
+                                                                    new MessageEmbed()
+                                                                    .setColor("#92cded")
+                                                                    .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                                                                    .setDescription(`**Ma description:** \n${(reply7.first().content)} \n \n` + `\n\n Auteur: ${this.message.author}`)
+                                                                    .attachFiles(lettreImg)
+                                                                    .setThumbnail('attachment://lettre.png')
+                                                                    .setImage(reponse.first().attachments.array()[0].proxyURL)
+                                                                    .setFooter(this.message.guild.name, this.message.guild.iconURL()) 
+                                                                    .setTimestamp()
+                                                                ).then(async (message) => {
+                                                                    await message.react('❤️').then().catch(console.error);
+                                                                    await message.react('💛').then().catch(console.error);
+
+                                                                    const filter = (reaction, user) => reaction.emoji.name === "❤️" ||
+                                                                        reaction.emoji.name === "💛" &&
+                                                                        user.id === this.message.author.id;
+
+                                                                    await message.awaitReactions(filter, {
+                                                                        max: 1,
+                                                                        errors: ["max"]
+                                                                    })     
+                                                                })
+                                                            }
+                                                        }
+                                                        message.edit(
+                                                            `Vous avez ajouté avec succès votre présentation !`
+                                                        ).then().catch(console.error);
+                                                        break;
+                                                    case "❌":
+                                                        await this.message.author.send(
+                                                            `WARNING: Vous avez décidé d'annuler l'opération.`
+                                                        ).then().catch(console.error);
+                                                        break;
                                                 };
                                             });
                                         }).then().catch(console.error);
