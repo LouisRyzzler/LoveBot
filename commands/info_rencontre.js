@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const pp = new MessageAttachment('./assets/img/pprencontre.jpg');
+const pp = new MessageAttachment('./assets/img/pprencontre.png');
 const { PREFIX } = require("../config");
 
 class Info_Rencontre {
@@ -31,7 +31,7 @@ class Info_Rencontre {
                             .setTitle("Comment ajouter votre profil ?")
                             .setDescription("Tapez `!start` pour poster ton profil. \n\nJe vous enverrai des instructions en message privé, suivez les attentivement.")
                             .attachFiles(pp)
-                            .setThumbnail('attachment:/pprencontre.jpg')
+                            .setThumbnail('attachment:/pprencontre.png')
 
                     )
                 }
