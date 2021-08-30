@@ -77,7 +77,7 @@ class Rencontre {
                             const filter = (reaction, user) => reaction.emoji.name ===  "🍑" ||
                                 reaction.emoji.name === "🍒" ||
                                 reaction.emoji.name === "🍉" ||
-                                reaction.emoji.name === "🍇" &&
+                                reaction.emoji.name === "🍇" ||
                                 reaction.emoji.name === "💌" &&
 
                                 user.id === this.message.author.id;
