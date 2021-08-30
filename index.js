@@ -1,5 +1,5 @@
 const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
-const gif = new MessageAttachment('./assets/img/gif.gif');
+const gif = new MessageAttachment('./assets/img/rencontre.png');
 
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
@@ -62,8 +62,7 @@ client.on('guildMemberAdd', async( member ) => {
         .setColor("#f16179")
         .setTitle("Bienvenue sur Rencontres `❤️`")
         .setDescription("⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒ \n\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683424>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683425>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
-        .setFooter(`✨ Profite bien parmis nous !`)
-        .setThumbnail('attachment://gif.gif')
+        .setThumbnail('attachment://rencontre.png')
         .attachFiles(gif)
         .setTimestamp();
 
