@@ -60,7 +60,7 @@ client.on('guildMemberAdd', async( member ) => {
 
     const embed =  new MessageEmbed()
         .setColor("#f16179")
-        .setTitle("Bienvenue sur Rencontres FR `❤️`")
+        .setTitle("Bienvenue sur Rencontres `❤️`")
         .setDescription("⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒ \n\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#876528588067835914>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#876529883000504420>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
         .setFooter(`✨ Profite bien parmis nous !`)
         .setThumbnail('attachment://gif.gif')
