@@ -29,7 +29,7 @@ class Info_Rencontre {
                         new MessageEmbed()
                             .setColor("#f16179")
                             .setTitle("Comment ajouter votre profil ?")
-                            .setDescription("Tapez **!rencontre** pour poster ton profil. \n\nJe vous enverrai des instructions en message privé, suivez les attentivement.")
+                            .setDescription("Tapez ```!start``` pour poster ton profil. \n\nJe vous enverrai des instructions en message privé, suivez les attentivement.")
                             .attachFiles(gif)
                             .setThumbnail('attachment://gif.gif')
 
