@@ -60,11 +60,10 @@ client.on('guildMemberAdd', async( member ) => {
 
     const embed =  new MessageEmbed()
         .setColor("#f16179")
-        .setTitle("Bienvenue sur Rencontres `❤️`")
-        .setDescription("⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒ \n\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683424>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683425>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> Amuse toi bien !")
+        .setTitle("Bienvenue sur Rencontres")
+        .setDescription("⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒ \n\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683424>")
         .setThumbnail('attachment://rencontre.png')
-        .attachFiles(gif)
-        .setTimestamp();
+        .attachFiles(gif);
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed);
