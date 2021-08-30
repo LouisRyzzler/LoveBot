@@ -90,7 +90,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
+                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -158,7 +158,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
+                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -226,7 +226,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
+                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
@@ -294,7 +294,7 @@ class Rencontre {
                                                 .addFields(
                                                     {
                                                         name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "```Réagis par ✅ pour confirmer ; Réagis par ❌ pour avorter.```",
+                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
