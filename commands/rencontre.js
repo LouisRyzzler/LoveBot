@@ -16,7 +16,7 @@ class Rencontre {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "rencontre":
+                case PREFIX + "start":
                     this.rencontre(); 
                     break; 
             }
@@ -28,7 +28,7 @@ class Rencontre {
             if(this.message.channel.id === "881598134906683424") {
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "rencontre") {
+                if(this.args[0] === PREFIX + "start") {
                     
                     this.message.author.send(
                         new MessageEmbed()
