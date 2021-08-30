@@ -63,7 +63,7 @@ class Rencontre {
                                 .addFields(
                                     {
                                         name: "Quel type de rencontre recherchez-vous ?.",
-                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis. \n💌 on verra bien.```",
+                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis. \n💌 pour trouver une histoire ordinaire.```",
                                         inline: false
                                     }
                                 )
