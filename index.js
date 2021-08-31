@@ -53,7 +53,7 @@ client.on('message', message => {
 const channelId = '881598135233830965'
 const channelId2 = '881598135233830965'
 
-client.on('guildMemberAdd', async( member, guildMember ) => {
+client.on('guildMemberAdd', async( member ) => {
 
     const channel2 = member.guild.channels.cache.get(channelId2)
     channel2.send(`Bienvenue ${member}`)
@@ -68,10 +68,8 @@ client.on('guildMemberAdd', async( member, guildMember ) => {
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed);
 
-
-
-    
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Membre"));
+    var role = member.guild.roles.find("id", "881598134856323112");
+    member.addRole(role);
 })
 
 
