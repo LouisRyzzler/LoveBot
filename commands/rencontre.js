@@ -62,8 +62,8 @@ class Rencontre {
                                 .setColor("#f16179")
                                 .addFields(
                                     {
-                                        name: "Quel type de rencontre recherchez-vous ?.",
-                                        value: "```🍑 pour trouver un coup d'un soir. \n🍒 pour trouver votre moitié. \n🍉 pour trouver un sexfirend. \n🍇 pour trouver des amis. \n💌 pour trouver une histoire ordinaire.```",
+                                        name: "Je suis là pour... ?.",
+                                        value: "```🍑 Pour une envie de pêcher avec toi. \n🍒 Pour trouver ma moitié. \n🍉 Pour des câlins récurrents sans pépins. \n🍇 Pour une sortie sans se prendre la grappe. \n💌 Oh et puis on verra bien ce qu'il se passe.```",
                                         inline: false
                                     }
                                 )
