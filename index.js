@@ -69,8 +69,8 @@ client.on('guildMemberAdd', async( member ) => {
     channel.send(embed);
 })
 
-client.on('serverNewMember', function(server, user) {
-    user.addTo(server.roles.get("name", "Membre"));
-});
+client.on('guildMemberAdd', async(guildMember) => {
+    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Membre"));
+ });
 
 client.login(process.env.TOKEN);
