@@ -66,11 +66,12 @@ client.on('guildMemberAdd', async( member ) => {
         .attachFiles(gif);
 
     const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed)
+    channel.send(embed);
+});
 
-    var role = member.guild.roles.find("id", "881598134856323112");
-    member.addRole(role);
-})
+client.on('guildMemberAdd', ( guildMember ) => {
+    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Membre"));
+});
 
 
 
