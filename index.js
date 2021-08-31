@@ -66,7 +66,9 @@ client.on('guildMemberAdd', async( member ) => {
         .attachFiles(gif);
 
     const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed);
+    channel.send(embed)
+
+    this.member.roles.add("881598134856323112")
 })
 
 
