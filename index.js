@@ -61,7 +61,7 @@ client.on('guildMemberAdd', async( member ) => {
     const embed =  new MessageEmbed()
         .setColor("#f16179")
         .setTitle("Bienvenue sur Rencontres")
-        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683424>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598134906683425>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:876766756771872809> <#881598135233830963>")
+        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683424>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683425>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://rencontre.png')
         .attachFiles(gif);
 
