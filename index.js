@@ -69,7 +69,7 @@ client.on('guildMemberAdd', async( member ) => {
     channel.send(embed)
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
-    member.roles.add(addRole)
+    member.roles.add(addRole);
 });
 
 
