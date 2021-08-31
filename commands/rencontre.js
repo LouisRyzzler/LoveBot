@@ -104,8 +104,8 @@ class Rencontre {
                                                 .setColor("#f16179")
                                                 .addFields(
                                                     {
-                                                        name: "Confirmer ou non la réaction du sondage.",
-                                                        value: "```Réagis par ✅ pour confirmer\nRéagis par ❌ pour avorter.```",
+                                                        name: "Es-tu certain de vouloir poster ton profil ?",
+                                                        value: "```✅ pour confirmer\n❌ pour avorter.```",
                                                         inline: false
                                                     }
                                                 )
