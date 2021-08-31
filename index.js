@@ -70,7 +70,7 @@ client.on('guildMemberAdd', async( member ) => {
 });
 
 client.on('guildMemberAdd', ( guildMember ) => {
-    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "Membre"));
+    guildMember.addRole(guildMember.guild.roles.find(role => role.name === "<@&881598134856323112>"));
 });
 
 
