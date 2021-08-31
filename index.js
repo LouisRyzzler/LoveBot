@@ -68,8 +68,9 @@ client.on('guildMemberAdd', async( member ) => {
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed)
 
-    this.guild.member.roles.add("881598134856323112")
-})
+    const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
+    member.roles.add(addRole)
+});
 
 
 
