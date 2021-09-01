@@ -47,7 +47,6 @@ client.on('message', message => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
-
 })
 
 const channelId = '881598135233830965'
