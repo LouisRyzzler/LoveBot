@@ -20,7 +20,6 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
-const { Level } = require('./commands/level.js')
 
 
 client.on('ready', async() => {
@@ -47,7 +46,6 @@ client.on('message', async (message) => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
-    new Level( message, client).selector()
 })
 
 const channelId = '881598135233830965'
