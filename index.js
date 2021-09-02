@@ -21,8 +21,6 @@ const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
 const { Level } = require('./commands/level.js')
-const { Rank2 } = require('./commands/rank.js')
-const { Leaderboard } = require('./commands/Leaderboard.js')
 
 
 client.on('ready', async() => {
@@ -30,7 +28,7 @@ client.on('ready', async() => {
     
 });
 
-client.on('message', message => {
+client.on('message', async (message) => {
     new Rencontre( message, client).selector()
     new Info_Rencontre( message, client).selector()
     new Avis( message, client).selector()
@@ -50,8 +48,6 @@ client.on('message', message => {
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
     new Level( message, client).selector()
-    new Rank2( message, client).selector()
-    new Leaderboard( message, client).selector()
 })
 
 const channelId = '881598135233830965'
