@@ -1,5 +1,7 @@
-const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
+const { Client, MessageEmbed, MessageAttachment, DiscordAPIError } = require('discord.js');
 const gif = new MessageAttachment('./assets/img/rencontre.png');
+const bot = new Discord.Client();
+const Levels = require('discord-xp')
 
 const client = new Client();
 const { Rencontre } = require('./commands/rencontre.js') 
@@ -20,7 +22,6 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
-
 
 
 client.on('ready', async() => {
@@ -70,6 +71,48 @@ client.on('guildMemberAdd', async( member ) => {
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
     member.roles.add(addRole);
 });
+
+
+bot.on("message", async message => {
+    if (!message.guild) return;
+    if (message.author.bot) return;
+
+    const prefix = '!'
+
+    const args = message.content.slice(prefix.lenght).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+
+
+    const randomXp = Math.floor(math.rnadom() * 9) + 1;
+    const hasLeveledUp = await Levels.appendXp(message.autohr.id, message.guild.id, randomXp);
+
+    if (hasLeveledUp) {
+        const user = await Levels.fetch(message.author.id, message.guild.id);
+        message.channel.send(`Tu as atteint le niveau ${user.level} !`);
+    }
+
+
+    if(command === "rank") {
+        const user = await Levels.fetch(message.author.id, message.guild.id);
+        message.channel.send(`Tu es Level **${user.level}** !`)
+    }
+
+    if(command === "leaderboard" ||command === "lb") {
+        const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 10);
+        if (rawLeaderboard.length < 1) return reply("Personne n'est inscrit dans le leaderboard.");
+
+        const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard);
+
+        const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}\nlevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`);
+
+        message.channel.send(`${lb.join("\n\n")}`)
+    }
+})
+
+
+
+
 
 
 
