@@ -28,7 +28,7 @@ class Casino {
             if(this.message.channel.id === "881598135510642780") { 
                 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "casino") {
+                if(this.args[0] === PREFIX + "casino" || PREFIX + "c") {
                     this.message.channel.send( 
                         new MessageEmbed()
                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
