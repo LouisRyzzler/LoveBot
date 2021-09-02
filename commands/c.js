@@ -3,7 +3,7 @@ const jackpotImg = new MessageAttachment('./assets/img/jackpot.jpg');
 const randomDice = () => Math.floor(Math.random() * 7 ) + 1;
 const { PREFIX } = require("../config");
 
-class Casino {
+class C {
     constructor(message, client) {
         this.client = client;
         this.message = message;
@@ -14,8 +14,8 @@ class Casino {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "casino":
-                    this.Casino(); 
+                case PREFIX + "c":
+                    this.C(); 
                     break; 
             }
         }
@@ -23,24 +23,24 @@ class Casino {
 
 
 
-    Casino() {
+    C() {
         if(this.message.channel.id !== this.client.user.id) {
             if(this.message.channel.id === "881598135510642780") { 
                 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "casino") {
-                    this.message.channel.send( 
+                if(this.args[0] === PREFIX + "c") {
+                    this.message.channel.send(
                         new MessageEmbed()
-                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                        .setColor("#f16179")
-                        .attachFiles(jackpotImg)
-                        .setThumbnail('attachment://jackpot.jpg')
-                        .addFields(
-                            { name: '#', value: randomDice(), inline: true },
-                            { name: '#', value: randomDice(), inline: true },
-                            { name: '#', value: randomDice(), inline: true }
-                        )
-                        .setFooter("Tape !casino ou !c pour jouer.")
+                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                            .setColor("#f16179")
+                            .attachFiles(jackpotImg)
+                            .setThumbnail('attachment://jackpot.jpg')
+                            .addFields(
+                                { name: '#', value: randomDice(), inline: true },
+                                { name: '#', value: randomDice(), inline: true },
+                                { name: '#', value: randomDice(), inline: true }
+                            )
+                            .setFooter("Tape !casino ou !c pour jouer.")
                     )
                 }
             }    
@@ -49,5 +49,5 @@ class Casino {
 }
 
 module.exports ={
-    Casino
+    C
 }
