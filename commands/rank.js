@@ -22,7 +22,7 @@ class Rank {
         this.message.delete().then().catch(console.error)
         if(this.args[0] === PREFIX + "rank") {
 
-            const user = await Levels.fetch(message.author.id, message.guild.id);
+            const user = Levels.fetch(message.author.id, message.guild.id);
             message.channel.send(`You are currently level **${user.level}**!`)
         }
     }

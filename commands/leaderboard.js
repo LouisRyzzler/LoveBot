@@ -1,5 +1,5 @@
 const { PREFIX } = require("../config");
-require('.commands/level')
+const { Leaderboard } = require('.commands/level')
 
 class Leaderboard {
     constructor(message, client) {
@@ -22,7 +22,7 @@ class Leaderboard {
         this.message.delete().then().catch(console.error)
         if(this.args[0] === PREFIX + "leaderboard" || PREFIX + "lb") {
 
-            const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5);
+            const rawLeaderboard = Levels.fetchLeaderboard(message.guild.id, 5);
             if (rawLeaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
 
             const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard); 
