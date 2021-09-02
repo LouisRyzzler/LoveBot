@@ -1,7 +1,7 @@
 const { PREFIX } = require("../config");
 const { Rank } = require('.commands/level')
 
-class Rank {
+class Rank2 {
     constructor(message, client) {
         this.client = client;
         this.message = message;
@@ -29,5 +29,5 @@ class Rank {
 }
 
 module.exports ={
-    Rank
+    Rank2
 }
