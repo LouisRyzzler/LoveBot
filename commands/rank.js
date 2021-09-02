@@ -1,5 +1,5 @@
 const { PREFIX } = require("../config");
-const { Rank } = require('.commands/level')
+const { Rank2 } = require('./level')
 
 class Rank2 {
     constructor(message, client) {
@@ -8,7 +8,7 @@ class Rank2 {
         this.args = message.content.slice().split(/ /).filter(element => element !== '');
     }
 
-    Rank() {
+    Rank2() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
                 case PREFIX + "rank":
@@ -18,7 +18,7 @@ class Rank2 {
         }
     }
 
-    Rank() {
+    Rank2() {
         this.message.delete().then().catch(console.error)
         if(this.args[0] === PREFIX + "rank") {
 

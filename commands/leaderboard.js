@@ -1,5 +1,5 @@
 const { PREFIX } = require("../config");
-const { Leaderboard } = require('.commands/level')
+const { Leaderboard } = require('./level')
 
 class Leaderboard {
     constructor(message, client) {
