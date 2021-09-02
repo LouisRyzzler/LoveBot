@@ -83,7 +83,7 @@ client.on('message', async message => {
 
 
 
-    const randomXp = Math.floor(math.random() * 9) + 1;
+    const randomXp = Math.floor(Math.random() * 9) + 1;
     const hasLeveledUp = await Levels.appendXp(message.autohr.id, message.guild.id, randomXp);
 
     if (hasLeveledUp) {
