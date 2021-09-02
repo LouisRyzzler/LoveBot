@@ -22,11 +22,9 @@ const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
 
-
-client.on('ready', async() => {
-    console.log(`${client.user.tag} est connecté !`);
-    
-});
+client.on("message", bot => {
+    console.log('LoveBot est connecté !')
+})
 
 client.on('message', message => {
     new Rencontre( message, client).selector()
@@ -72,7 +70,7 @@ client.on('guildMemberAdd', async( member ) => {
 });
 
 
-bot.on("message", async message => {
+client.on('message', async message => {
     if (!message.guild) return;
     if (message.author.bot) return;
 
@@ -97,7 +95,7 @@ bot.on("message", async message => {
         message.channel.send(`Tu es Level **${user.level}** !`)
     }
 
-    if(command === "leaderboard" ||command === "lb") {
+    if(command === "leaderboard" || command === "lb") {
         const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 10);
         if (rawLeaderboard.length < 1) return reply("Personne n'est inscrit dans le leaderboard.");
 
