@@ -1,6 +1,5 @@
-const { Client, MessageEmbed, MessageAttachment, DiscordAPIError } = require('discord.js');
+const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
 const gif = new MessageAttachment('./assets/img/rencontre.png');
-const bot = new Discord.Client();
 const Levels = require('discord-xp')
 
 const client = new Client();
