@@ -22,9 +22,11 @@ const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
 
-client.on("message", bot => {
-    console.log('LoveBot est connecté !')
-})
+
+client.on('ready', async() => {
+    console.log(`${client.user.tag} est connecté !`);
+    
+});
 
 client.on('message', message => {
     new Rencontre( message, client).selector()
@@ -81,7 +83,7 @@ client.on('message', async message => {
 
 
 
-    const randomXp = Math.floor(math.rnadom() * 9) + 1;
+    const randomXp = Math.floor(math.random() * 9) + 1;
     const hasLeveledUp = await Levels.appendXp(message.autohr.id, message.guild.id, randomXp);
 
     if (hasLeveledUp) {
