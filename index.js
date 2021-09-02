@@ -76,39 +76,36 @@ client.on('message', async message => {
     if (!message.guild) return;
     if (message.author.bot) return;
 
-    const prefix = '!'
+    const prefix = '?';
 
-    const args = message.content.slice(prefix.lenght).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-
-
-    const randomXp = Math.floor(Math.random() * 9) + 1;
+    const randomXp = Math.floor(Math.random() * 9) + 1; 
     const hasLeveledUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp);
-
     if (hasLeveledUp) {
         const user = await Levels.fetch(message.author.id, message.guild.id);
-        message.channel.send(`Tu as atteint le niveau ${user.level} !`);
+        message.channel.send(`You leveled up to ${user.level}! Keep it going!`);
     }
-
-
+    
+    
     if(command === "rank") {
         const user = await Levels.fetch(message.author.id, message.guild.id);
-        message.channel.send(`Tu es Level **${user.level}** !`)
+        message.channel.send(`You are currently level **${user.level}**!`)
     }
-
+    
+ 
     if(command === "leaderboard" || command === "lb") {
-        const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 10);
-        if (rawLeaderboard.length < 1) return reply("Personne n'est inscrit dans le leaderboard.");
+        const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5);
+        if (rawLeaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
 
-        const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard);
+        const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard); 
 
-        const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}\nlevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`);
+        const lb = leaderboard.map(e => `${e.position}. ${e.username}#${e.discriminator}\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`);
 
         message.channel.send(`${lb.join("\n\n")}`)
     }
 })
-
 
 
 
