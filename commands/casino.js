@@ -14,7 +14,7 @@ class Casino {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "casino":
+                case PREFIX + "casino" || PREIFX + "c":
                     this.Casino(); 
                     break; 
             }
