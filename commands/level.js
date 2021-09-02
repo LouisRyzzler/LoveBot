@@ -32,13 +32,13 @@ class Level {
         this.message.delete().then().catch(console.error)
         if(this.args[0] === PREFIX + "rank") {
 
-            const user = await Levels.fetch(message.author.id, message.guild.id);
+            const user =  Levels.fetch(message.author.id, message.guild.id);
             message.channel.send(`You are currently level **${user.level}**!`)
         }
 
         this.message.delete().then().catch(console.error)
         if(this.args[0] === PREFIX + "leaderboard" || PREFIX + "lb") {
-            const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5);
+            const rawLeaderboard =  Levels.fetchLeaderboard(message.guild.id, 5);
             if (rawLeaderboard.length < 1) return reply("Nobody's in leaderboard yet.");
     
             const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard); 
