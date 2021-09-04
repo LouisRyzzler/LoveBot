@@ -17,6 +17,7 @@ const { Dice } = require('./commands/dice.js')
 const { Gold } = require('./commands/gold.js')
 const { Boost } = require('./commands/boost.js')
 const { Helpcasino } = require('./commands/helpcasino.js')
+const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
 
@@ -26,7 +27,7 @@ client.on('ready', async() => {
     
 });
 
-client.on('message', async (message) => {
+client.on('message', message => {
     new Rencontre( message, client).selector()
     new Info_Rencontre( message, client).selector()
     new Avis( message, client).selector()
@@ -42,6 +43,7 @@ client.on('message', async (message) => {
     new Gold( message, client).selector()
     new Boost( message, client).selector()
     new Helpcasino( message, client).selector()
+    new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
 })
