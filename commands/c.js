@@ -29,18 +29,18 @@ class C {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "c") {
-                    this.message.channel.send(
+                    this.message.channel.send( 
                         new MessageEmbed()
-                            .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                            .setColor("#f16179")
-                            .attachFiles(jackpotImg)
-                            .setThumbnail('attachment://jackpot.jpg')
-                            .addFields(
-                                { name: '#', value: randomDice(), inline: true },
-                                { name: '#', value: randomDice(), inline: true },
-                                { name: '#', value: randomDice(), inline: true }
-                            )
-                            .setFooter("Tape !casino ou !c pour jouer.")
+                        .setAuthor(this.message.author.username, this.message.author.avatarURL())
+                        .setColor("#f16179")
+                        .attachFiles(jackpotImg)
+                        .setThumbnail('attachment://jackpot.jpg')
+                        .addFields(
+                            { name: '#', value: randomDice(), inline: true },
+                            { name: '#', value: randomDice(), inline: true },
+                            { name: '#', value: randomDice(), inline: true }
+                        )
+                        .setFooter("Tape !casino ou !c pour jouer.")
                     )
                 }
             }    
