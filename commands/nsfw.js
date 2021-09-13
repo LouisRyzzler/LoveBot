@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const sweetypp = new MessageAttachment('./assets/img/Gif pp.gif');
+const temple = new MessageAttachment('./assets/img/temple.jpg');
 const { PREFIX } = require("../config");
 
 class NSFW {
@@ -12,7 +12,7 @@ class NSFW {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "nsfw":
+                case PREFIX + "temple":
                     this.NSFW(); 
                     break; 
             }
@@ -21,23 +21,17 @@ class NSFW {
 
     NSFW() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "876554356311347280") { 
+            if(this.message.channel.id === "887038138264997929") { 
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "nsfw") {
+                if(this.args[0] === PREFIX + "temple") {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setTitle("Catégorie NSFW") 
-                            .setDescription("En cochant la réaction ci-dessous, tu pourras accéder à la catégorie NSFW et, tu certifies être âgé de plus de 18ans.")
-
-                    )
-                    this.message.channel.send(
-                        new MessageEmbed()
-                            .setColor("#f16179")
-                            .attachFiles(sweetypp)
-                            .setImage('attachment://Gif pp.gif')
-                            .setFooter("Coche la réaction pour acceder à la catégorie NSFW.")
+                            .setTitle("Event") 
+                            .setDescription("Vous êtes un aventurier en quête d'exploration et soudain, au loin, perdu dans la jungle vous apercevez un immense temple. \nVous vous approchez et vous toquez à la porte... \n\nClique sur la réaction pour voir ce qu'il se cache derrière la porte !")
+                            .setThumbnail('attachment://temple.jpg')
+                            .attachFiles(temple)
                     )
                 }
             }    

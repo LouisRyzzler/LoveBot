@@ -1,7 +1,7 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const diceImg = new MessageAttachment('./assets/img/dice.png');
 const nitro = new MessageAttachment('./assets/img/nitro.png');
-const randomDice = () => Math.floor(Math.random() * 1000 ) + 1;
+const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
 const { PREFIX } = require("../config");
 
 class Dice {
