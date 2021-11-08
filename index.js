@@ -2,8 +2,6 @@ const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
 const gif = new MessageAttachment('./assets/img/gif.gif');
 
 const client = new Client();
-const { Rencontre } = require('./commands/rencontre.js') 
-const { Info_Rencontre } = require('./commands/info_rencontre.js');
 const { Avis } = require('./commands/avis.js');
 const { Reglement } = require('./commands/reglement.js');
 const { Update } = require('./commands/update.js');
@@ -28,8 +26,6 @@ client.on('ready', async() => {
 });
 
 client.on('message', message => {
-    new Rencontre( message, client).selector()
-    new Info_Rencontre( message, client).selector()
     new Avis( message, client).selector()
     new Reglement( message, client).selector()
     new Update( message, client).selector()
