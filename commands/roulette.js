@@ -54,7 +54,7 @@ class Roulette {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                                        .setColor("#f16179")
+                                                        .setColor("#4992ff")
                                                         .attachFiles(bleu)
                                                         .setThumbnail('attachment://bleu.png')
                                                         .setDescription("Tu as perdu")
@@ -64,7 +64,7 @@ class Roulette {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                                        .setColor("#f16179")
+                                                        .setColor("#ff4962")
                                                         .attachFiles(rouge)
                                                         .setThumbnail('attachment://rouge.png')
                                                         .setDescription("Tu as gagné")
@@ -83,7 +83,7 @@ class Roulette {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                                        .setColor("#f16179")
+                                                        .setColor("#4992ff")
                                                         .attachFiles(bleu)
                                                         .setThumbnail('attachment://bleu.png')
                                                         .setDescription("Tu as gagné")
@@ -99,7 +99,7 @@ class Roulette {
                                                 this.message.channel.send(
                                                     new MessageEmbed()
                                                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                                                        .setColor("#f16179")
+                                                        .setColor("#ff4962")
                                                         .attachFiles(rouge)
                                                         .setThumbnail('attachment://rouge.png')
                                                         .setDescription("Tu as perdu")

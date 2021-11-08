@@ -53,9 +53,9 @@ client.on('guildMemberAdd', async( member ) => {
     channel2.send(`Bienvenue ${member}`)
 
     const embed =  new MessageEmbed()
-        .setColor("#f16179")
-        .setTitle("Bienvenue sur Rencontres")
-        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683424>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683425>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
+        .setColor("#d049ff")
+        .setTitle("Bienvenue dans 🌌 l'Univers")
+        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://gif.gif')
         .attachFiles(gif);
 

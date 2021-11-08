@@ -41,7 +41,7 @@ class Helpcasino {
                 )
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(dice1)
                         .setThumbnail('attachment://dice.png')
                         .addFields(
@@ -51,7 +51,7 @@ class Helpcasino {
                 )
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(roulette)
                         .setThumbnail('attachment://roulette.png')
                         .addFields(
