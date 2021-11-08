@@ -33,7 +33,7 @@ class Roulette {
 
                         this.message.channel.send(
                             new MessageEmbed()
-                                .setColor("#f16179")
+                                .setColor("#d049ff")
                                 .setTitle("La roulette")
                                 .setDescription("```Mise sur le rouge ou sur le bleu```")
                         ).then(async (message) => {

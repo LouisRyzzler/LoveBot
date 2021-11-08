@@ -31,7 +31,7 @@ class Reglement {
                 if(this.args[0] === PREFIX + "reglement") {
                     this.message.channel.send(
                         new MessageEmbed()
-                            .setColor("#f16179")
+                            .setColor("#d049ff")
                             .attachFiles(parcheminImg)
                             .setThumbnail('attachment://parchemin.png')
                             .setDescription("<:discord:862996341247967243> <:pointer:876532736435826729> Respectez les **[Guidelines](https://discord.com/guidelines)** et **[Termes](https://discord.com/terms)** de Discord. \n\n<:membre:862996342859235359> <:pointer:876532736435826729> Pour rester sur le serveur vous devez posséder [la majorité numérique dans votre pays.](https://support.discord.com/hc/en-us/articles/360040724612) \n\n<:message:862996395513085952> <:pointer:876532736435826729> Toutes formes de discrimination, au même titre qu'insulter les autres sont interdis. Tout contenu choquant ou inapproprié fera l'objet d'une sanction. \n\n<:lock1:862996342450946068> <:pointer:876532736435826729> Ne divulguez pas vos informations personnelles: mot de passe, carte bancaire ou adresse. \n\n<:shild:862996341831893022> <:pointer:876532736435826729> Ne contestez pas les décisions du staff. Les doubles compte ou l'utilisation de bug issus du bot sont interdis. \n\n<:link1:862996342917955604> <:pointer:876532736435826729> Toutes formes de pub, sauf dans le salon réservé à cet effet est prohibé. \n\n<:recherche:862996342385541120> <:pointer:876532736435826729> Pour tout signalement, ouvrez un ticket ou contacter un modérateur. \n\n<:reglement:862996341483634718> <:pointer:876532736435826729> Gardez un profil approprié.")

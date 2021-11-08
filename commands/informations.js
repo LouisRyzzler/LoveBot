@@ -29,7 +29,7 @@ class Informations {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setTitle("Informations Pings")
-                            .setColor("#f16179")
+                            .setColor("#d049ff")
                             .attachFiles(PingImg)
                             .setThumbnail('attachment://ping.webp')
                             .setDescription("<:pointer:876532736435826729> <@&881598134441099352> **Giveaways**\n Ce rôle permet d'être averti des récents giveaways proposés par le serveur \n\n<:pointer:876532736435826729> <@&881598134441099351> **Partenariats**\n Ce rôle permet d'être averti des partenariats avec d'autres serveurs. \n\n<:pointer:876532736435826729> <@&881598134441099350> **Upgrades**\n Ce rôle permet d'être averti des nouvelles mises à jour du bot. \n\n<:pointer:876532736435826729> <@&881598134441099349> **Evènements**\n Ce rôle permet d’être averti lors des nouveaux évènements et d’y participer.")

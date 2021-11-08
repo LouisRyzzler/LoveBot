@@ -29,7 +29,7 @@ class Boost {
             if(this.args[0] === PREFIX + "boost") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(boost1)
                         .setThumbnail('attachment://Boost1.gif')
                         .addFields(

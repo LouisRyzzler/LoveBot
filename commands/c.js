@@ -32,7 +32,7 @@ class C {
                     this.message.channel.send( 
                         new MessageEmbed()
                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(jackpotImg)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(

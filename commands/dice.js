@@ -33,7 +33,7 @@ class Dice {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                            .setColor("#f16179")
+                            .setColor("#d049ff")
                             .attachFiles(diceImg)
                             .setThumbnail('attachment://dice.png')
                             .addFields(

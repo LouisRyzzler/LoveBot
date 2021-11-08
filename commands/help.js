@@ -29,7 +29,7 @@ class Help {
             if(this.args[0] === PREFIX + "help") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(exclamation)
                         .setThumbnail('attachment://exclamation.png')
                         .addFields(

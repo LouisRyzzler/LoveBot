@@ -29,7 +29,7 @@ class Gold {
             if(this.args[0] === PREFIX + "gold") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#f16179")
+                        .setColor("#d049ff")
                         .attachFiles(boost2)
                         .setThumbnail('attachment://Boost2.gif')
                         .addFields(
