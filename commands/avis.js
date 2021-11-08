@@ -46,7 +46,7 @@ class Avis {
                         });
                     this.message.author.send(
                         new MessageEmbed()
-                            .setColor("#f16179")
+                            .setColor("#d049ff")
                             .addFields(
                                 {
                                     name: "N'oublie pas de laisser une note !",
