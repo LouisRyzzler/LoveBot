@@ -76,6 +76,17 @@ class Avis {
                         }).then(async collected => {
                             switch (collected.first().emoji.name) {
                                 case "0️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
@@ -99,6 +110,17 @@ class Avis {
                                     })    
                                     break       
                                 case  "1️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
@@ -121,6 +143,17 @@ class Avis {
                                     })    
                                     break       
                                 case  "2️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
@@ -143,6 +176,17 @@ class Avis {
                                     })    
                                     break       
                                 case  "3️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
@@ -165,6 +209,17 @@ class Avis {
                                     })      
                                     break                  
                                 case  "4️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
@@ -187,6 +242,17 @@ class Avis {
                                     })      
                                     break                      
                                 case  "5️⃣":
+                                    this.message.author.send(
+                                        new MessageEmbed()
+                                        .setColor("#d049ff")
+                                        .addFields(
+                                            {
+                                                name: "Merci d'avoir donné votre avis !",
+                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                inline: false 
+                                            }
+                                        )
+                                    )
                                     this.message.channel.send(
                                         new MessageEmbed()
                                             .setColor("#2f3136")
