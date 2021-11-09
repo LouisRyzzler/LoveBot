@@ -82,7 +82,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
@@ -116,7 +116,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
@@ -149,7 +149,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
@@ -182,7 +182,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
@@ -215,7 +215,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
@@ -248,7 +248,7 @@ class Avis {
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
-                                                value: "```Votre avis à été ajouté au salon <#881598135233830963> vous pouvez aller le consulter.```",
+                                                value: "```Votre avis à été ajouté, vous pouvez aller le consulter.```",
                                                 inline: false 
                                             }
                                         )
