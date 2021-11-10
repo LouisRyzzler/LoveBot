@@ -1,5 +1,4 @@
 const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
-const gif = new MessageAttachment('./assets/img/gif.gif');
 
 const client = new Client();
 const { Avis } = require('./commands/avis.js');
@@ -44,23 +43,41 @@ client.on('message', message => {
     new NSFW( message, client).selector()
 })
 
+//########################### JOIN MEMBER MESSAGE ###########################//
+
 const channelId = '881598135233830965'
 const channelId2 = '881598135233830965'
+const gif = new MessageAttachment('./assets/img/gif.gif');
+const space = new MessageAttachment('./assets/img/space.gif');
+const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
 
 client.on('guildMemberAdd', async( member ) => {
 
     const channel2 = member.guild.channels.cache.get(channelId2)
     channel2.send(`Bienvenue ${member}`)
 
-    const embed =  new MessageEmbed()
+    if( randomDice() === 1 ) {
+   
+        const embed =  new MessageEmbed()
         .setColor("#d049ff")
         .setTitle("Bienvenue dans 🌌 l'Univers")
         .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://gif.gif')
         .attachFiles(gif);
+        
+    } else{
+        const embed1 =  new MessageEmbed()
+        .setColor("#d049ff")
+        .setTitle("Bienvenue dans 🌌 l'Univers")
+        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
+        .setThumbnail('attachment://space.gif')
+        .attachFiles(space)
+    }
 
     const channel = member.guild.channels.cache.get(channelId)
     channel.send(embed)
+    const channel = member.guild.channels.cache.get(channelId)
+    channel.send(embed1)
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
     member.roles.add(addRole);
