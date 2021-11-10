@@ -49,8 +49,7 @@ const channelId = '881598135233830965'
 const channelId2 = '881598135233830965'
 const spacegif1 = new MessageAttachment('./assets/img/gif.gif');
 const spacegif2 = new MessageAttachment('./assets/img/space.gif');
-const spacegif3 = new MessageAttachment('./assets/img/space.gif');
-const randomDice = () => Math.floor(Math.random() * 3 );
+const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
 
 client.on('guildMemberAdd', async( member ) => {
 
@@ -65,36 +64,22 @@ client.on('guildMemberAdd', async( member ) => {
         .attachFiles(spacegif1);
 
         
-    const embed1 =  new MessageEmbed() //Definir l'Embed 2
+    const embed2 =  new MessageEmbed() //Definir l'Embed 2
         .setColor("#d049ff")
         .setTitle("Bienvenue dans 🌌 l'Univers")
         .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://space.gif')
         .attachFiles(spacegif2);
 
-    
-    const embed2 =  new MessageEmbed() //Definir l'Embed 3
-        .setColor("#d049ff")
-        .setTitle("Bienvenue dans 🌌 l'Univers")
-        .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
-        .setThumbnail('attachment://soleil.gif')
-        .attachFiles(spacegif3);
-
-
         
     const channel = member.guild.channels.cache.get(channelId)
 
     if(randomDice() === 1) { // Condition 
         channel.send(embed) // Envoie de l'Embed 1
+    } else {
+        channel.send(embed2) // Ou envoie de l'Embed 2
     } 
-
-    if(randomDice() === 2) { // Condition 
-        channel.send(embed1) // Envoie de l'Embed 2
-    }
-
-    if(randomDice() === 3) { // Condition 
-        channel.send(embed2) // Envoie de l'Embed 3
-    }
+    
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
     member.roles.add(addRole);
