@@ -47,37 +47,39 @@ client.on('message', message => {
 
 const channelId = '881598135233830965'
 const channelId2 = '881598135233830965'
-const gif = new MessageAttachment('./assets/img/gif.gif');
-const space = new MessageAttachment('./assets/img/space.gif');
+const spacegif1 = new MessageAttachment('./assets/img/gif.gif');
+const spacegif2 = new MessageAttachment('./assets/img/space.gif');
 const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
 
 client.on('guildMemberAdd', async( member ) => {
 
-    const channel2 = member.guild.channels.cache.get(channelId2)
+    const channel2 = member.guild.channels.cache.get(channelId2) //Envoie du pseudo
     channel2.send(`Bienvenue ${member}`)
 
-    if( randomDice() === 1 ) {
-   
-        const embed =  new MessageEmbed()
+    const embed =  new MessageEmbed() //Definir l'Embed 1
         .setColor("#d049ff")
         .setTitle("Bienvenue dans 🌌 l'Univers")
         .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://gif.gif')
-        .attachFiles(gif);
+        .attachFiles(spacegif1);
+
         
-    } else{
-        const embed1 =  new MessageEmbed()
+    const embed1 =  new MessageEmbed() //Definir l'Embed 2
         .setColor("#d049ff")
         .setTitle("Bienvenue dans 🌌 l'Univers")
         .setDescription("<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:876772752474931260> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://space.gif')
-        .attachFiles(space)
-    }
+        .attachFiles(spacegif2);
 
+        
     const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed)
-    const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed1)
+
+    if(randomDice() === 1) { // Condition 
+        channel.send(embed) // Envoie de l'Embed 1
+    } else {
+        channel.send(embed1) // Ou envoie de l'Embed 2
+    }
+    
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
     member.roles.add(addRole);
