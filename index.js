@@ -50,7 +50,7 @@ const channelId2 = '881598135233830965'
 const spacegif1 = new MessageAttachment('./assets/img/gif.gif');
 const spacegif2 = new MessageAttachment('./assets/img/space.gif');
 const spacegif3 = new MessageAttachment('./assets/img/space.gif');
-const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
+const randomDice = () => Math.floor(Math.random() * 3 ) + 1;
 
 client.on('guildMemberAdd', async( member ) => {
 
