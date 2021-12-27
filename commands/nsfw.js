@@ -27,7 +27,7 @@ class NSFW {
                 if(this.args[0] === PREFIX + "nsfw") {
                     this.message.channel.send(
                         new MessageEmbed()
-                            .setColor("#f16179")
+                            .setColor("#ff2c52")
                             .setTitle("NSFW ACCES") 
                             .setDescription("Coche la réaction pour accéder aux contenus NSFW du serveur !")
                             .setThumbnail('attachment://Gifpp.gif')
