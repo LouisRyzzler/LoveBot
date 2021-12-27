@@ -21,7 +21,7 @@ class NSFW {
 
     NSFW() {
         if(this.message.channel.id !== this.client.user.id) {
-            if(this.message.channel.id === "887038138264997929") { 
+            if(this.message.channel.id === "925097517291540490") { 
 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "nsfw") {
