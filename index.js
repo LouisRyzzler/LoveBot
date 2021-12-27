@@ -47,9 +47,7 @@ client.on('message', message => {
 
 const channelId = '881598135233830965'
 const channelId2 = '881598135233830965'
-const spacegif1 = new MessageAttachment('./assets/img/gif.gif');
-const spacegif2 = new MessageAttachment('./assets/img/space.gif');
-const randomDice = () => Math.floor(Math.random() * 2 ) + 1;
+const sexGif = new MessageAttachment('./assets/img/Gifpp.gif');
 
 client.on('guildMemberAdd', async( member ) => {
 
@@ -57,29 +55,18 @@ client.on('guildMemberAdd', async( member ) => {
     channel2.send(`Bienvenue ${member}`)
 
     const embed =  new MessageEmbed() //Definir l'Embed 1
-        .setColor("#d049ff")
-        .setTitle("Bienvenue dans 🌌 l'Univers")
+        .setColor("#ff2c52")
+        .setTitle("Bienvenue dans Rencontres FR")
         .setDescription("<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
-        .setThumbnail('attachment://gif.gif')
-        .attachFiles(spacegif1);
+        .setThumbnail('attachment://Gifpp.gif')
+        .attachFiles(sexGif);
 
         
-    const embed2 =  new MessageEmbed() //Definir l'Embed 2
-        .setColor("#d049ff")
-        .setTitle("Bienvenue dans 🌌 l'Univers")
-        .setDescription("<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
-        .setThumbnail('attachment://space.gif')
-        .attachFiles(spacegif2);
-
+    
         
     const channel = member.guild.channels.cache.get(channelId)
+    channel.send(embed) // Envoie de l'Embed 1
 
-    if(randomDice() === 1) { // Condition 
-        channel.send(embed) // Envoie de l'Embed 1
-    } else {
-        channel.send(embed2) // Ou envoie de l'Embed 2
-    } 
-    
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
     member.roles.add(addRole);
