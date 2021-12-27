@@ -17,6 +17,7 @@ const { Helpcasino } = require('./commands/helpcasino.js')
 const { C } = require('./commands/c.js')
 const { Roulette } = require('./commands/roulette.js')
 const { NSFW } = require('./commands/nsfw.js')
+const { nsfwinfos } = require('./commands/nsfwinfos.js')
 
 
 client.on('ready', async() => {
@@ -41,6 +42,7 @@ client.on('message', message => {
     new C( message, client).selector()
     new Roulette( message, client).selector()
     new NSFW( message, client).selector()
+    new nsfwinfos( message, client).selector()
 })
 
 //########################### JOIN MEMBER MESSAGE ###########################//
@@ -65,7 +67,7 @@ client.on('guildMemberAdd', async( member ) => {
     
         
     const channel = member.guild.channels.cache.get(channelId)
-    channel.send(embed) // Envoie de l'Embed 1
+    channel.send(embed) // Envoie de l'Embed 
 
 
     const addRole = member.guild.roles.cache.find(r => r.name === 'Membre')
