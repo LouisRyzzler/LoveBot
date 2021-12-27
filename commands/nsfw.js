@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const temple = new MessageAttachment('./assets/img/temple.jpg');
+const temple = new MessageAttachment('./assets/img/Gifpp.gif');
 const { PREFIX } = require("../config");
 
 class NSFW {
@@ -12,7 +12,7 @@ class NSFW {
     selector() {
         if(this.message.author.id !== this.client.user.id) {
             switch(this.args[0]) {
-                case PREFIX + "temple":
+                case PREFIX + "nsfw":
                     this.NSFW(); 
                     break; 
             }
@@ -24,13 +24,13 @@ class NSFW {
             if(this.message.channel.id === "887038138264997929") { 
 
                 this.message.delete().then().catch(console.error)
-                if(this.args[0] === PREFIX + "temple") {
+                if(this.args[0] === PREFIX + "nsfw") {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f16179")
-                            .setTitle("Event") 
-                            .setDescription("Vous êtes un aventurier en quête d'exploration et soudain, au loin, perdu dans la jungle vous apercevez un immense temple. \nVous vous approchez et vous toquez à la porte... \n\nClique sur la réaction pour voir ce qu'il se cache derrière la porte !")
-                            .setThumbnail('attachment://temple.jpg')
+                            .setTitle("NSFW ACCES") 
+                            .setDescription("Coche la réaction pour accéder aux contenus NSFW du serveur !")
+                            .setThumbnail('attachment://Gifpp.gif')
                             .attachFiles(temple)
                     )
                 }
