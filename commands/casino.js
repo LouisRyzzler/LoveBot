@@ -32,7 +32,17 @@ class Casino {
                     this.message.channel.send( 
                         new MessageEmbed()
                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                        .setColor("#d049ff")
+                        .setColor(
+                            { value: randomDice("#ff3333")},
+                            { value: randomDice("#ffd133")},
+                            { value: randomDice("#a2ff33")},
+                            { value: randomDice("#33ff7a")},
+                            { value: randomDice("#33ceff")},
+                            { value: randomDice("#8033ff")},
+                            { value: randomDice("#f033ff")},
+                            { value: randomDice("#ff33a2")},
+                            { value: randomDice("#3349ff")}
+                        )
                         .attachFiles(jackpotImg)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(
