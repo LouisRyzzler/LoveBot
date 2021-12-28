@@ -45,7 +45,7 @@ class Dice {
                         this.message.channel.send(
                             new MessageEmbed()
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
-                            .setColor("#f16179")
+                            .setColor('RANDOM')
                             .attachFiles(nitro)
                             .setThumbnail('attachment://nitro.png')
                             .addFields(
