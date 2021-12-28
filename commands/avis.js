@@ -33,7 +33,7 @@ class Avis {
                     
                     this.message.author.send(
                         new MessageEmbed()
-                            .setColor("#d049ff")
+                            .setColor("#2f3136")
                             .setTitle("Laisse un avis sur Rencontres FR")
                             .setDescription("```Pour laisser un avis il te suffit d'écrire un message ici, je me chargerai pour toi de poster ton avis.```")
                     ).then(async (message) => {
@@ -46,7 +46,7 @@ class Avis {
                         });
                     this.message.author.send(
                         new MessageEmbed()
-                            .setColor("#d049ff")
+                            .setColor("#2f3136")
                             .addFields(
                                 {
                                     name: "N'oublie pas de laisser une note !",
@@ -78,7 +78,7 @@ class Avis {
                                 case "0️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
@@ -112,7 +112,7 @@ class Avis {
                                 case  "1️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
@@ -145,7 +145,7 @@ class Avis {
                                 case  "2️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
@@ -178,7 +178,7 @@ class Avis {
                                 case  "3️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
@@ -211,7 +211,7 @@ class Avis {
                                 case  "4️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",
@@ -244,7 +244,7 @@ class Avis {
                                 case  "5️⃣":
                                     this.message.author.send(
                                         new MessageEmbed()
-                                        .setColor("#d049ff")
+                                        .setColor("#2f3136")
                                         .addFields(
                                             {
                                                 name: "Merci d'avoir donné votre avis !",

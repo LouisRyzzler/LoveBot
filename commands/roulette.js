@@ -72,7 +72,7 @@ class Roulette {
                                                 )
                                                 this.message.author.send(
                                                     new MessageEmbed()
-                                                        .setColor("#f16179")
+                                                        .setColor("#2f3136")
                                                         .setTitle("Surprise Surprise `👀`")
                                                         .setDescription("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
                                                 )
@@ -91,7 +91,7 @@ class Roulette {
                                                 )
                                                 this.message.author.send(
                                                     new MessageEmbed()
-                                                        .setColor("#f16179")
+                                                        .setColor("#2f3136")
                                                         .setTitle("Surprise Surprise `👀`")
                                                         .setDescription("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
                                                 )
