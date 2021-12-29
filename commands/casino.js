@@ -33,6 +33,7 @@ class Casino {
                         new MessageEmbed()
                         .setAuthor(this.message.author.username, this.message.author.avatarURL())
                         .setColor('RANDOM')
+                        .attachFiles(jackpotImg)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(
                             { name: '#', value: randomDice(), inline: true },
