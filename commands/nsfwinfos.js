@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const { PREFIX } = require("../config");
-const heart = new MessageAttachment('./assets/img/heart.png');
+const heart = new MessageAttachment('./assets/img/heart.gif');
 
 
 class nsfwinfos {
@@ -34,7 +34,7 @@ class nsfwinfos {
                             .setColor("#2f3136")
                             .setTitle("💞 NSFW_IRL | Infos & Règles")
                             .attachFiles(heart)
-                            .setThumbnail('attachment://heart.png')
+                            .setThumbnail('attachment://heart.gif')
                             .setDescription("La catégorie IRL a été ouverte pour vous permettre d'avoir des salons plus spécifiques, sans obstruer la catégorie principale NSFW, qui se concentre sur l'utilisation des bots. Ces canaux incluent toujours les règles par défaut qui s'appliquent partout ailleurs sur le serveur, mais certains détails supplémentaires doivent être précisés. \n\n <:pointer:882148627282280488> **Ne publiez PAS votre propre contenu / nus IRL.**\nNous avons une section vérifiée du serveur pour le partage sécurisé de contenu personnel. Ignorer ceci pour publier dans cette catégorie entraînera une interdiction immédiate, car les avertissements sont très denses sur tous les salons. \n\n <:pointer:882148627282280488> **Ne divulguez PAS le contenu des autres.**\n La publication de contenu provenant d'autres utilisateurs ou de personnes que vous connaissez personnellement entraînera une interdiction instantanée et un signalement à Discord.")
                             .setFooter("Toutes demandent de certif se font dans les DM du STAFF.")
                     )
