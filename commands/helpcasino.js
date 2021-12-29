@@ -31,7 +31,7 @@ class Helpcasino {
             if(this.args[0] === PREFIX + "helpcasino") {
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#d049ff")
+                        .setColor("#2f3136")
                         .attachFiles(jackpot1)
                         .setThumbnail('attachment://jackpot.jpg')
                         .addFields(
@@ -41,7 +41,7 @@ class Helpcasino {
                 )
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#d049ff")
+                        .setColor("#2f3136")
                         .attachFiles(dice1)
                         .setThumbnail('attachment://dice.png')
                         .addFields(
@@ -51,7 +51,7 @@ class Helpcasino {
                 )
                 this.message.channel.send(
                     new MessageEmbed()
-                        .setColor("#d049ff")
+                        .setColor("#2f3136")
                         .attachFiles(roulette)
                         .setThumbnail('attachment://roulette.png')
                         .addFields(
