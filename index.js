@@ -58,10 +58,10 @@ client.on('guildMemberAdd', async( member ) => {
 
     const embed =  new MessageEmbed() //Definir l'Embed 1
         .setColor('RANDOM')
-        .setTitle("Bienvenue dans Rencontres FR")
-        .setDescription("<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830965>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
+        .setTitle("Bienvenue Sur Sweety")
+        .setDescription("<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598134906683427>\n<a:4231grayarrowright:882148688447811594> <:8484greensmalldot:882148627101941790> <#881598135233830963>")
         .setThumbnail('attachment://Gifpp.gif')
-        .attachFiles(sexGif);
+        .attachFiles(sexGif)
 
         
     
