@@ -36,6 +36,7 @@ class Dice {
                             .setColor('RANDOM')
                             .attachFiles(diceImg)
                             .setThumbnail('attachment://dice.png')
+                            .setDescription("Perdu")
                             .addFields(
                                 { name: '#', value: randomDice(), inline: true }
                             )
