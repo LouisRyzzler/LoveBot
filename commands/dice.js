@@ -1,5 +1,5 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const diceImg = new MessageAttachment('./assets/img/dice.png');
+const diceImg = new MessageAttachment('./assets/img/dice2.png');
 const nitro = new MessageAttachment('./assets/img/nitro.png');
 const randomDice = () => Math.floor(Math.random() * 2000 ) + 1;
 const { PREFIX } = require("../config");
@@ -35,8 +35,7 @@ class Dice {
                             .setAuthor(this.message.author.username, this.message.author.avatarURL())
                             .setColor('RANDOM')
                             .attachFiles(diceImg)
-                            .setThumbnail('attachment://dice.png')
-                            .setDescription("Perdu")
+                            .setThumbnail('attachment://dice2.png')
                             .addFields(
                                 { name: '#', value: randomDice(), inline: true }
                             )
