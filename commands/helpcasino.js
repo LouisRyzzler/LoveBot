@@ -46,7 +46,7 @@ class Helpcasino {
                         .setThumbnail('attachment://dice.png')
                         .addFields(
                             { name: "Les Dés", value: "Pour jouer aux dés, allez dans le channel <#881598135510642780> et tapez la commande `!dice`.", inline: true},
-                            { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `1`.\n\n En récompense un **Nitro Classic** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
+                            { name: "Comment gagner ?", value: "Pour gagner aux dés, il vous suffit d'obtenir le numéro `1`.\n\n En récompense **5€ Paypal** vous sera remis sous reserve d'une preuve.", inline: false, inline: true}
                         )
                 )
                 this.message.channel.send(
