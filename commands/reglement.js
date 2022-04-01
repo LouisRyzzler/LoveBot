@@ -32,7 +32,8 @@ class Reglement {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f767b9")
-                            .setImage(règlement)
+                            .attachFiles(règlement)
+                            .setThumbnail('attachment://règlementfinale.png')
                             .setDescription("**Fuji est un serveur communautaire, social qui reste proche de ses memebres. Un groupe pour se retrouver à chaque instant.** \n\nLe règlement est nécéssaire pour maintenir l'entente entre chacun d'entre nous. Accepter le pour accéder au contenu du serveur. \n\n ")
                     )
                 }
