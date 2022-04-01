@@ -3,6 +3,7 @@ const { Client, MessageEmbed, MessageAttachment } = require('discord.js');
 const client = new Client();
 const { Avis } = require('./commands/avis.js');
 const { Reglement } = require('./commands/reglement.js');
+const { Reglement2 } = require('./commands/reglement2.js');
 const { Update } = require('./commands/update.js');
 const { Colorimg } = require('./commands/colorimg.js');
 const { Color1 } = require('./commands/color1.js');
@@ -28,6 +29,7 @@ client.on('ready', async() => {
 client.on('message', message => {
     new Avis( message, client).selector()
     new Reglement( message, client).selector()
+    new Reglement2( message, client).selector()
     new Update( message, client).selector()
     new Colorimg( message, client).selector()
     new Color1( message, client).selector()

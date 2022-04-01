@@ -1,6 +1,5 @@
-const { MessageEmbed, MessageAttachment } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { PREFIX } = require("../config");
-const règlement = new MessageAttachment('./assets/img/règlementfinale.png');
 
 
 class Reglement {
@@ -29,14 +28,6 @@ class Reglement {
                 
                 this.message.delete().then().catch(console.error)
                 if(this.args[0] === PREFIX + "reglement") {
-                    this.message.channel.send(
-                        new MessageEmbed()
-                            .setColor("#f767b9")
-                            .attachFiles(règlement)
-                            .setThumbnail('attachment://règlementfinale.png')
-
-                    )
-
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f767b9")
