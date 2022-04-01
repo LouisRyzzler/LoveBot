@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const { PREFIX } = require("../config");
-const parcheminImg = new MessageAttachment('./assets/img/parchemin.png');
+const règlement = new MessageAttachment('./assets/img/règlementfinale.png');
 
 
 class Reglement {
@@ -32,7 +32,8 @@ class Reglement {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f767b9")
-                            .setDescription("**Fuji est un serveur communautaire, social qui reste proche de ses memebres. Un groupe pour se retrouver à tout moment.** \n\nLe règlement est nécéssaire pour maintenir l'entente entre chacun d'entre nous. Accepter le pour accéder au contenu du serveur. \n\n ")
+                            .setImage(règlement)
+                            .setDescription("**Fuji est un serveur communautaire, social qui reste proche de ses memebres. Un groupe pour se retrouver à chaque instant.** \n\nLe règlement est nécéssaire pour maintenir l'entente entre chacun d'entre nous. Accepter le pour accéder au contenu du serveur. \n\n ")
                     )
                 }
             }    
