@@ -40,7 +40,7 @@ class Reglement {
                     this.message.channel.send(
                         new MessageEmbed()
                             .setColor("#f767b9")
-                            .setDescription("**Fuji est un serveur communautaire, social qui reste proche de ses memebres. Un groupe pour se retrouver à chaque instant.** \n\nLe règlement est nécéssaire pour maintenir l'entente entre chacun d'entre nous. Accepter le pour accéder au contenu du serveur. \n\n ")
+                            .setDescription("**Fuji est un serveur communautaire, social qui reste proche de ses memebres. Un groupe pour se retrouver à chaque instant.** \n\nLe règlement est nécéssaire pour maintenir l'entente entre chacun d'entre nous. Accepter le pour accéder au contenu du serveur. \n\n```01. efzfefzefzefefezfefzefezfzefzefzefzefzeffezfezfzefzefzfez \n02. ezfzefezfzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzefzef \n03. fffiefezfifiiefiezfefuheuifefhifuizfuihefuuzehfuifu \n04. ggjgorgjireogjirjgijiogjiergjiojgiojoigoiergirgoiergjijergiojeroigjer \n05. gkergopropgkeprogpokregkeorkgpeprgoeprgopekgpokergopkergpoe \n06. gporkgopekrgkeprgpekorgkerkgerpogoerkgoeopgoergerg \n07. kgpokerogkoeprgkokergokopergkpoekgpokeropgkoperkgergergekg \n08. gokogkopregoreogkorekgkroegokgkergpkepgoepgergpkergkorkgoekrg \n09. regjregjgjiogoigiirogjiregjrejgjerogireogjoierjgoierjgoiejgregjgeriojg \n10. htrrthkoprtkrtophkortrtohkrotkprothkoprtkportkhotrkotrkhktrktrhkrtoph```")
                     )
                 }
             }    
