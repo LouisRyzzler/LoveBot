@@ -32,7 +32,8 @@ class Reglement2 {
                             .setColor("#f767b9")
                             .attachFiles(règlement)
                             .setThumbnail('attachment://règlementfinale.png')
-
+                            .setDescription("")
+                            .setTitle("")
                     )
                 }
             }    
